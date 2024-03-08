@@ -144,7 +144,7 @@
         };
 
         neovim_nav {
-            bindings = <&mo 5>;
+            bindings = <&mo 0>;
             key-positions = <38 37>;
         };
     };
@@ -206,23 +206,12 @@
 
         NAVLOCK {
             bindings = <
-&bootloader  &none         &none       &none       &none                                                                                              &none           &none           &none            &none      &none
-&none        &bt_0         &bt_1       &bt_2       &bt_3          &none                                                            &none              &none           &none           &none            &none      &none
-&none        &bl BL_TOG    &bl BL_DEC  &bl BL_INC  &bl BL_SET 20  &none                                                            &kp K_SCROLL_UP    &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN    &none      &none
-&none        &kp LEFT_GUI  &none       &to 2       &to 0          &none                                                            &kp K_SCROLL_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL  &none
-&none        &none         &none       &none       &none          &none  &none  &none  &none  &none  &none           &kp LEFT_ALT  &none              &none           &none           &none            &none      &none
-&none        &none         &none       &none       &none                 &none  &none  &none  &none  &kp LEFT_SHIFT  &kp ESCAPE                       &none           &none           &none            &none      &none
-            >;
-        };
-
-        NeoVIM {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                  &trans    &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans    &trans     &trans     &trans     &trans
-&trans  &kp Q   &kp W   &kp F   &kp P   &kp B                                                   &kp J   &kp L     &kp UP     &kp Y      &kp MINUS  &trans
-&trans  &kp A   &kp R   &kp S   &kp T   &kp G                                                   &kp M   &kp LEFT  &kp DOWN   &kp RIGHT  &kp O      &trans
-&trans  &kp Z   &kp X   &kp C   &kp D   &kp V   &trans  &trans  &trans  &trans  &trans  &trans  &kp K   &kp H     &kp COMMA  &kp DOT    &kp FSLH   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans    &trans     &trans     &trans     &trans
+&bootloader  &bt_0       &bt_1       &bt_2       &bt_3                                                                                                     &none           &none           &none            &none      &none
+&none        &bl BL_TOG  &bl BL_DEC  &bl BL_INC  &bl BL_CYCLE  &bl BL_SET 20                                                            &none              &none           &none           &none            &none      &none
+&none        &none       &kp N7      &kp N8      &kp N9        &none                                                                    &kp K_SCROLL_UP    &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN    &none      &none
+&none        &kp N0      &kp N4      &kp N5      &kp N6        &none                                                                    &kp K_SCROLL_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL  &none
+&none        &none       &kp N1      &kp N3      &kp N2        &none          &none  &none  &none  &none  &none           &kp LEFT_ALT  &none              &none           &none           &none            &none      &none
+&none        &none       &none       &none       &none                        &to 0  &to 2  &none  &none  &kp LEFT_SHIFT  &kp ESCAPE                       &none           &none           &none            &none      &none
             >;
         };
     };
