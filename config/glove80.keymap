@@ -45,6 +45,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        symtap: symtap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SYMTAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
