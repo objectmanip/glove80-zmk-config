@@ -152,9 +152,16 @@
             key-positions = <25 35 59>;
         };
 
-        neovim_nav {
-            bindings = <&mo 0>;
-            key-positions = <38 37>;
+        navleft {
+            bindings = <&mo 5>;
+            key-positions = <36 37>;
+            layers = <0>;
+        };
+
+        navright {
+            bindings = <&mo 5>;
+            key-positions = <42 43>;
+            layers = <0>;
         };
     };
 
@@ -173,9 +180,9 @@
             bindings = <
 &kp F1                &kp F2           &kp F3           &kp F4           &kp F5                                                                                                                                                                                                                                        &kp F6                       &kp F7                   &kp F8                &kp F9                          &kp F10
 &kp ESCAPE            &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F4 NUMBER_4             &mt F5 N5                                                                                                                                                                                     &mt F6 NUMBER_6     &mt F7 N7                    &mt F8 N8                &mt F9 N9             &mt F10 N0                      &kp F11
-&kp TAB               &kp Q            &kp W            &kp F            &symtap LEFT_PARENTHESIS P  &kp B                                                                                                                                                                                         &kp J               &symtap RIGHT_PARENTHESIS L  &kp U                    &kp Y                 &kp MINUS                       &kp SEMICOLON
-&mt LCTRL SQT         &kp A            &kp R            &kp S            &symtap LEFT_BRACKET T      &kp G                                                                                                                                                                                         &kp M               &symtap RIGHT_BRACKET N      &kp E                    &kp I                 &kp O                           &kp LEFT_BRACKET
-&mt LEFT_SHIFT EQUAL  &kp Z            &kp X            &kp C            &symtap LEFT_BRACE D        &symtap EXCLAMATION V  &lt 1 SPACE          &tap_layer_hold_mod LEFT_ALT 1  &mt LEFT_GUI LG(LS(F1))      &mt LEFT_WIN LS(LG(F1))      &tap_layer_hold_mod RIGHT_ALT 1  &mt RIGHT_SHIFT ENTER  &symtap QUESTION K  &symtap RIGHT_BRACE H        &symtap SEMICOLON COMMA  &symtap COLON PERIOD  &symtap NON_US_BACKSLASH SLASH  &kp RIGHT_BRACKET
+&kp TAB               &kp Q            &kp W            &kp F            &symtap LEFT_PARENTHESIS P  &kp B                                                                                                                                                                                         &kp J               &symtap RIGHT_PARENTHESIS L  &kp U                    &kp Y                 &kp MINUS                       &kp C_VOLUME_UP
+&mt LCTRL SQT         &kp A            &kp R            &kp S            &symtap LEFT_BRACKET T      &kp G                                                                                                                                                                                         &kp M               &symtap RIGHT_BRACKET N      &kp E                    &kp I                 &kp O                           &kp C_PLAY
+&mt LEFT_SHIFT EQUAL  &kp Z            &kp X            &kp C            &symtap LEFT_BRACE D        &symtap EXCLAMATION V  &lt 1 SPACE          &tap_layer_hold_mod LEFT_ALT 1  &mt LEFT_GUI LG(LS(F1))      &mt LEFT_WIN LS(LG(F1))      &tap_layer_hold_mod RIGHT_ALT 1  &mt RIGHT_SHIFT ENTER  &symtap QUESTION K  &symtap RIGHT_BRACE H        &symtap SEMICOLON COMMA  &symtap COLON PERIOD  &symtap NON_US_BACKSLASH SLASH  &kp C_VOL_DN
 &kp LC(LA(F13))       &kp C_VOL_DN     &kp C_VOLUME_UP  &kp LEFT         &kp RIGHT                                          &mt LCTRL BACKSPACE  &mt LS(HOME) HOME               &rust_el LS(RC(LEFT_ALT)) 0  &rust_el LS(RC(LEFT_ALT)) 0  &mt LS(END) END                  &mt RCTRL DEL                              &kp UP                       &kp DOWN                 &kp C_PREVIOUS        &kp C_NEXT                      &kp C_PLAY
             >;
         };
@@ -193,12 +200,12 @@
 
         GAMES1 {
             bindings = <
-&trans      &trans  &trans          &trans            &trans                                                                             &trans  &trans     &trans   &trans     &trans
-&kp ESCAPE  &kp N1  &kp N2          &kp N3            &kp N4      &kp N5                                                         &kp N6  &kp N7  &kp N8     &kp N9   &kp N0     &kp F11
-&kp TAB     &kp Q   &kp W           &kp F             &kp P       &kp B                                                          &kp J   &kp L   &kp U      &kp Y    &kp MINUS  &trans
-&kp LCTRL   &kp A   &kp R           &kp S             &kp T       &kp G                                                          &kp M   &kp N   &kp E      &kp I    &kp O      &trans
-&kp LSHFT   &kp Z   &kp X           &kp C             &kp D       &kp V   &kp SPACE  &mo 3     &trans  &trans  &trans   &trans   &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH   &trans
-&trans      &trans  &kp K_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT          &kp BSPC   &kp HOME  &mo 3   &trans  &kp RET  &kp DEL          &trans  &trans     &trans   &trans     &trans
+&trans      &trans  &trans          &trans            &trans                                                                                 &trans  &trans     &trans   &trans     &trans
+&kp ESCAPE  &kp N1  &kp N2          &kp N3            &kp N4      &kp N5                                                             &kp N6  &kp N7  &kp N8     &kp N9   &kp N0     &kp F11
+&kp TAB     &kp Q   &kp W           &kp F             &kp P       &kp B                                                              &kp J   &kp L   &kp U      &kp Y    &kp MINUS  &trans
+&kp LCTRL   &kp A   &kp R           &kp S             &kp T       &kp G                                                              &kp M   &kp N   &kp E      &kp I    &kp O      &trans
+&kp LSHFT   &kp Z   &kp X           &kp C             &kp D       &kp V   &kp SPACE  &kp LEFT_ALT  &mo 3  &trans  &trans  &kp ENTER  &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH   &trans
+&trans      &trans  &kp K_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT          &kp BSPC   &kp HOME      &mo 3  &trans  &trans  &kp DEL            &trans  &trans     &trans   &trans     &trans
             >;
         };
 
@@ -213,7 +220,7 @@
             >;
         };
 
-        layer_4 {
+        BLUETOOTH {
             bindings = <
 &none  &none  &none  &none  &none                                                                 &none  &none  &none  &none  &none
 &none  &to 0  &none  &none  &none  &bootloader                                             &none  &none  &none  &none  &none  &none
@@ -221,6 +228,17 @@
 &none  &bt_0  &bt_1  &bt_2  &bt_3  &out OUT_TOG                                            &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &bt BT_CLR    &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none         &none  &none  &none  &none  &none
+            >;
+        };
+
+        Navigation {
+            bindings = <
+&to 0  &none         &none     &none     &none                                                                                         &none      &none     &none     &none         &none
+&none  &none         &none     &none     &none      &none                                                                       &none  &none      &none     &none     &none         &none
+&none  &none         &none     &kp UP    &none      &none                                                                       &none  &none      &kp UP    &none     &none         &none
+&none  &kp LEFT_GUI  &kp LEFT  &kp DOWN  &kp RIGHT  &none                                                                       &none  &kp LEFT   &kp DOWN  &kp DOWN  &kp LEFT_GUI  &none
+&none  &none         &none     &none     &kp LCTRL  &none  &kp LEFT_SHIFT  &kp LCTRL  &none  &none  &kp LCTRL  &kp RIGHT_SHIFT  &none  &kp RCTRL  &none     &none     &none         &none
+&none  &none         &none     &none     &none             &kp LS(LCTRL)   &none      &none  &none  &none      &kp LS(LCTRL)           &none      &none     &none     &none         &none
             >;
         };
     };
