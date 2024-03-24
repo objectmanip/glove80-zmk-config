@@ -138,17 +138,6 @@
     combos {
         compatible = "zmk,combos";
 
-        rst-l1 {
-            bindings = <&to 1>;
-            key-positions = <36 37 38>;
-            layers = <0>;
-        };
-
-        ien-l1 {
-            bindings = <&to 1>;
-            key-positions = <41 42 43>;
-        };
-
         rft-gaming {
             bindings = <&to 2>;
             key-positions = <38 36 25>;
