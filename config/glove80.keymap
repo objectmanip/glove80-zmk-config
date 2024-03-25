@@ -176,7 +176,7 @@
         layer0 {
             bindings = <&to 0>;
             key-positions = <41 42 37 38>;
-            layers = <1 2 3 4>;
+            layers = <1 2 3 4 5>;
         };
     };
 
