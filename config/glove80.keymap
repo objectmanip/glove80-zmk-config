@@ -140,6 +140,13 @@
 
             label = "RUST_ENDLINE";
         };
+
+        openconslohere: openconslohere {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(L) &kp C &kp M &kp D &kp ENTER>;
+            label = "OPENCONSLOHERE";
+        };
     };
 
     combos {
@@ -189,6 +196,11 @@
         search {
             bindings = <&kp LG(LS(F1))>;
             key-positions = <38 36 41 43>;
+        };
+
+        openconsole {
+            bindings = <&openconslohere>;
+            key-positions = <38 35 41 44>;
         };
     };
 
