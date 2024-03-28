@@ -239,12 +239,12 @@
 
         GAMES1 {
             bindings = <
-&trans      &trans  &trans      &trans       &trans                                                                                 &trans  &trans     &trans   &trans     &trans
-&kp ESCAPE  &kp N1  &kp N2      &kp N3       &kp N4      &kp N5                                                             &kp N6  &kp N7  &kp N8     &kp N9   &kp N0     &kp F11
-&kp TAB     &kp Q   &kp W       &kp F        &kp P       &kp B                                                              &kp J   &kp L   &kp U      &kp Y    &kp MINUS  &trans
-&kp LCTRL   &kp A   &kp R       &kp S        &kp T       &kp G                                                              &kp M   &kp N   &kp E      &kp I    &kp O      &trans
-&kp LSHFT   &kp Z   &kp X       &kp C        &kp D       &kp V   &kp SPACE  &kp LEFT_ALT  &mo 3  &trans  &trans  &kp ENTER  &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH   &trans
-&trans      &trans  &kp C_PREV  &kp C_PAUSE  &kp C_NEXT          &kp BSPC   &kp HOME      &mo 3  &trans  &trans  &kp DEL            &trans  &trans     &trans   &trans     &trans
+&trans      &trans  &trans      &trans       &trans                                                                                    &trans  &trans     &trans   &trans     &trans
+&kp ESCAPE  &kp N1  &kp N2      &kp N3       &kp N4      &kp N5                                                                &kp N6  &kp N7  &kp N8     &kp N9   &kp N0     &kp F11
+&kp TAB     &kp Q   &kp W       &kp F        &kp P       &kp B                                                                 &kp J   &kp L   &kp U      &kp Y    &kp MINUS  &trans
+&kp LCTRL   &kp A   &kp R       &kp S        &kp T       &kp G                                                                 &kp M   &kp N   &kp E      &kp I    &kp O      &trans
+&kp LSHFT   &kp Z   &kp X       &kp C        &kp D       &kp V   &kp SPACE  &kp LEFT_ALT  &mo 3     &trans  &trans  &kp ENTER  &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH   &trans
+&trans      &trans  &kp C_PREV  &kp C_PAUSE  &kp C_NEXT          &mkp MB1   &mkp MB3      &mkp MB2  &trans  &trans  &kp DEL            &trans  &trans     &trans   &trans     &trans
             >;
         };
 
