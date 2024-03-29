@@ -85,15 +85,6 @@
             #binding-cells = <0>;
             bindings = <&symtap LS(F10) C_PLAY_PAUSE>, <&kp LC(F2)>;
         };
-
-        capsword_hold: capsword_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CAPSWORD_HOLD";
-            bindings = <&kp>, <&caps_word>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
     };
 
     macros {
