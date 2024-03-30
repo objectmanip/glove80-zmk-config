@@ -15,7 +15,7 @@
 #define LOWER 1
 #define MAGIC 2
 
-&sk { release-after-ms = <700>; };
+&sk { release-after-ms = <400>; };
 
 / {
     behaviors {
