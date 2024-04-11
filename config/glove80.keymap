@@ -75,15 +75,6 @@
             bindings = <&kp C_VOL_DN>, <&kp C_MUTE>;
         };
 
-        stickyhold: stickyhold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "STICKYHOLD";
-            bindings = <&kp>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         superplay: superplay {
             compatible = "zmk,behavior-tap-dance";
             label = "SUPERPLAY";
@@ -97,6 +88,26 @@
             bindings = <&kp>;
             #binding-cells = <1>;
             release-after-ms = <500>;
+        };
+
+        sticky_hold: sticky_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STICKY_HOLD";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+        };
+
+        sl_hold: sl_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SL_HOLD";
+            bindings = <&kp>, <&sl>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
         };
     };
 
@@ -233,42 +244,42 @@
 &kp F1                &kp F2         &kp F3         &kp F4         &kp F5                                                                                                                                                                                                                                    &kp F6                       &kp F7                   &kp F8                &kp F9                          &kp F10
 &kp ESCAPE            &symtap F1 N1  &symtap F2 N2  &symtap F3 N3  &symtap F4 NUMBER_4         &symtap F5 N5                                                                                                                                                                            &symtap F6 NUMBER_6  &symtap F7 N7                &symtap F8 N8            &symtap F9 N9         &symtap F10 N0                  &kp F11
 &kp TAB               &kp Q          &kp W          &kp F          &symtap LEFT_PARENTHESIS P  &kp B                                                                                                                                                                                    &kp J                &symtap RIGHT_PARENTHESIS L  &kp U                    &kp Y                 &kp MINUS                       &symtap F12 ENTER
-&mt LCTRL SQT         &kp A          &kp R          &kp S          &symtap LEFT_BRACKET T      &symtap EXCLAMATION G                                                                                                                                                                    &symtap QUESTION M   &symtap RIGHT_BRACKET N      &kp E                    &kp I                 &kp O                           &caps_word
-&mt LEFT_SHIFT EQUAL  &kp Z          &kp X          &kp C          &symtap LEFT_BRACE D        &kp V                  &lt 1 SPACE              &tap_layer_hold_mod LEFT_ALT 1  &mt LS(LA(RCTRL)) LS(LG(F1))  &symtap LS(LA(RCTRL)) RA(TAB)  &sk_normal RIGHT_ALT  &sk LEFT_SHIFT        &kp K                &symtap RIGHT_BRACE H        &symtap SEMICOLON COMMA  &symtap COLON PERIOD  &symtap NON_US_BACKSLASH SLASH  &supervoldown
+&sl_hold LCTRL 1      &kp A          &kp R          &kp S          &symtap LEFT_BRACKET T      &symtap EXCLAMATION G                                                                                                                                                                    &symtap QUESTION M   &symtap RIGHT_BRACKET N      &kp E                    &kp I                 &kp O                           &kp SQT
+&mt LEFT_SHIFT EQUAL  &kp Z          &kp X          &kp C          &symtap LEFT_BRACE D        &kp V                  &lt 1 SPACE              &tap_layer_hold_mod LEFT_ALT 1  &mt LS(LA(RCTRL)) LS(LG(F1))  &symtap LS(LA(RCTRL)) RA(TAB)  &sk_normal RIGHT_ALT  &sk LEFT_SHIFT        &kp K                &symtap RIGHT_BRACE H        &symtap SEMICOLON COMMA  &symtap COLON PERIOD  &symtap NON_US_BACKSLASH SLASH  &caps_word
 &kp LC(LA(F13))       &supervoldown  &supervolup    &kp LEFT       &kp RIGHT                                          &symtap LCTRL BACKSPACE  &symtap LS(HOME) HOME           &kp LEFT_GUI                  &kp LEFT_WIN                   &symtap LS(END) END   &symtap LCTRL DELETE                       &kp UP                       &kp DOWN                 &kp C_PREVIOUS        &kp C_NEXT                      &superplay
             >;
         };
 
         SYMNUM {
             bindings = <
-&none          &none        &none              &none          &none                                                                                                                                                     &none       &none                      &none                       &none                      &none
-&trans         &to 0        &to 1              &to 2          &to 4        &none                                                                                                                 &kp SCROLLLOCK         &kp KP_NUM  &kp KP_EQUAL               &kp KP_DIVIDE               &kp KP_MULTIPLY            &none
-&trans         &kp SLASH    &kp ASTERISK       &kp AMPERSAND  &kp GRAVE    &kp LEFT_PARENTHESIS                                                                                                  &kp RIGHT_PARENTHESIS  &kp KP_N7   &kp KP_N8                  &kp KP_N9                   &kp KP_MINUS               &kp C_VOLUME_UP
-&kp LS(SQT)    &kp HASH     &kp LS(NUMBER_4)   &kp RA(N5)     &kp AT_SIGN  &kp LEFT_BRACKET                                                                                                      &kp RIGHT_BRACKET      &kp KP_N4   &kp KP_N5                  &kp KP_N6                   &symtap COLON KP_NUMBER_0  &kp C_PP
-&kp LS(EQUAL)  &kp PERCENT  &kp RA(SEMICOLON)  &kp TILDE      &kp CARET    &kp LEFT_BRACE        &tap_layer_hold_mod LEFT_ALT 0  &tap_layer_hold_mod LEFT_ALT 0  &trans  &trans  &trans  &trans  &kp RIGHT_BRACE        &kp KP_N1   &symtap COMMA KP_NUMBER_2  &symtap PERIOD KP_NUMBER_3  &kp SLASH                  &kp C_VOLUME_DOWN
-&trans         &none        &none              &none          &none                              &trans                          &trans                          &trans  &trans  &trans  &trans                         &none       &none                      &none                       &none                      &trans
+&none      &none        &none              &none          &none                                                                                                                                                     &none       &none                      &none                       &none                      &none
+&trans     &to 0        &to 1              &to 2          &to 4        &none                                                                                                                 &kp SCROLLLOCK         &kp KP_NUM  &kp KP_EQUAL               &kp KP_DIVIDE               &kp KP_MULTIPLY            &none
+&trans     &kp SLASH    &kp ASTERISK       &kp AMPERSAND  &kp GRAVE    &kp LEFT_PARENTHESIS                                                                                                  &kp RIGHT_PARENTHESIS  &kp KP_N7   &kp KP_N8                  &kp KP_N9                   &kp KP_MINUS               &trans
+&kp SQT    &kp HASH     &kp LS(NUMBER_4)   &kp RA(N5)     &kp AT_SIGN  &kp LEFT_BRACKET                                                                                                      &kp RIGHT_BRACKET      &kp KP_N4   &kp KP_N5                  &kp KP_N6                   &symtap COLON KP_NUMBER_0  &trans
+&kp EQUAL  &kp PERCENT  &kp RA(SEMICOLON)  &kp TILDE      &kp CARET    &kp LEFT_BRACE        &tap_layer_hold_mod LEFT_ALT 0  &tap_layer_hold_mod LEFT_ALT 0  &trans  &trans  &trans  &trans  &kp RIGHT_BRACE        &kp KP_N1   &symtap COMMA KP_NUMBER_2  &symtap PERIOD KP_NUMBER_3  &kp SLASH                  &trans
+&trans     &none        &none              &none          &none                              &trans                          &trans                          &trans  &trans  &trans  &trans                         &none       &none                      &none                       &none                      &trans
             >;
         };
 
-        GAMES1 {
+        One-Handed1 {
             bindings = <
-&trans      &trans  &trans      &trans       &trans                                                                                  &trans  &trans     &trans   &trans     &trans
-&kp ESCAPE  &kp N1  &kp N2      &kp N3       &kp N4      &kp N5                                                              &kp N6  &kp N7  &kp N8     &kp N9   &kp N0     &kp F11
-&kp TAB     &kp Q   &kp W       &kp F        &kp P       &kp B                                                               &kp J   &kp L   &kp U      &kp Y    &kp MINUS  &trans
-&kp LCTRL   &kp A   &kp R       &kp S        &kp T       &kp G                                                               &kp M   &kp N   &kp E      &kp I    &kp O      &trans
-&kp LSHFT   &kp Z   &kp X       &kp C        &kp D       &kp V   &kp SPACE  &kp LEFT_ALT  &mo 3   &trans  &trans  &kp ENTER  &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH   &trans
-&trans      &trans  &kp C_PREV  &kp C_PAUSE  &kp C_NEXT          &trans     &trans        &trans  &trans  &trans  &kp DEL            &trans  &trans     &trans   &trans     &trans
+&trans      &trans  &trans  &trans  &trans                                                                           &trans  &trans     &trans   &trans     &trans
+&kp ESCAPE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                           &kp N6  &kp N7  &kp N8     &kp N9   &kp N0     &kp F11
+&kp TAB     &kp Q   &kp W   &kp F   &kp P   &kp B                                                            &kp J   &kp L   &kp U      &kp Y    &kp MINUS  &trans
+&kp LCTRL   &kp A   &kp R   &kp S   &kp T   &kp G                                                            &kp M   &kp N   &kp E      &kp I    &kp O      &trans
+&kp LSHFT   &kp Z   &kp X   &kp C   &kp D   &kp V   &kp SPACE  &kp LEFT_ALT  &sl 3   &trans  &trans  &trans  &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH   &trans
+&trans      &trans  &trans  &trans  &trans          &trans     &trans        &trans  &trans  &trans  &trans          &trans  &trans     &trans   &trans     &trans
             >;
         };
 
-        GAMES2 {
+        One-Handed2 {
             bindings = <
-&none  &none      &none    &none      &none                                                            &none  &none  &none  &none  &none
-&none  &kp N0     &kp N9   &kp N8     &kp N7  &kp N6                                            &none  &none  &none  &none  &none  &none
-&none  &kp MINUS  &kp Y    &kp U      &kp L   &kp J                                             &none  &none  &none  &none  &none  &none
-&none  &kp O      &kp I    &kp E      &kp N   &kp M                                             &none  &none  &none  &none  &none  &none
-&none  &kp FSLH   &kp DOT  &kp COMMA  &kp H   &kp K   &to 0  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none      &none    &none      &none           &none  &none  &none  &none  &none  &none         &none  &none  &none  &none  &none
+&none       &none           &none       &none      &none                                                                                                  &none  &none  &none  &none  &none
+&none       &kp N0          &kp N9      &kp N8     &kp N7  &kp N6                                                                                  &none  &none  &none  &none  &none  &none
+&kp ENTER   &kp MINUS       &kp Y       &kp U      &kp L   &kp J                                                                                   &none  &none  &none  &none  &none  &none
+&none       &kp O           &kp I       &kp E      &kp N   &kp M                                                                                   &none  &none  &none  &none  &none  &none
+&none       &kp FSLH        &kp DOT     &kp COMMA  &kp H   &kp K   &sk LEFT_SHIFT     &sk RALT             &kp LA(LS(RCTRL))  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&superplay  &kp C_PREVIOUS  &kp C_NEXT  &kp DOWN   &kp UP          &symtap LCTRL DEL  &symtap LS(END) END  &trans             &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
 
