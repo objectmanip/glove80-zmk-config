@@ -202,7 +202,7 @@
         unstuck: unstuck {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp RALT &kp LEFT_SHIFT &kp RSHIFT &kp LEFT_ALT>;
+            bindings = <&kp LCTRL &kp LCTRL &kp RALT &kp RALT &kp LEFT_SHIFT &kp RSHIFT &kp LEFT_ALT &kp LALT>;
             label = "UNSTUCK";
         };
     };
