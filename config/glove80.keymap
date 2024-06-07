@@ -205,6 +205,13 @@
             bindings = <&kp LCTRL &kp LCTRL &kp RALT &kp RALT &kp LEFT_SHIFT &kp RSHIFT &kp LEFT_ALT &kp LALT>;
             label = "UNSTUCK";
         };
+
+        close_tab_and_swap: close_tab_and_swap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(W) &kp LA(TAB)>;
+            label = "CLOSE_TAB_AND_SWAP";
+        };
     };
 
     combos {
