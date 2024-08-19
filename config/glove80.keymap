@@ -153,7 +153,7 @@
         layer_mod: layer_mod {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_MOD";
-            bindings = <&kp>, <&mo>;
+            bindings = <&kp>, <&sl>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
