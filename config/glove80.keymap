@@ -164,7 +164,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LEFT_ALT";
             #binding-cells = <0>;
-            bindings = <&layer_mod LEFT_ALT 3>, <&to 3>;
+            bindings = <&layer_mod LEFT_ALT 2>, <&to 2>;
         };
     };
 
@@ -255,7 +255,7 @@
         compatible = "zmk,combos";
 
         rft-gaming {
-            bindings = <&to 4>;
+            bindings = <&to 3>;
             key-positions = <38 36 25>;
             layers = <0>;
         };
@@ -276,16 +276,16 @@
         };
 
         Functionkeys {
-            bindings = <&mo 6>;
+            bindings = <&mo 0>;
             key-positions = <42 43 41>;
-            layers = <0 4>;
+            layers = <0 3>;
             require-prior-idle-ms = <200>;
         };
 
         layer0 {
             bindings = <&to 0>;
             key-positions = <41 42 37 38>;
-            layers = <1 4 5>;
+            layers = <1 3 4>;
         };
 
         search {
@@ -323,34 +323,23 @@
 
         SYMNUM {
             bindings = <
-&rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                                                                                                       &rgb_ug RGB_BRI  &rgb_ug RGB_BRD            &rgb_ug RGB_SAI             &rgb_ug RGB_SAD            &none
-&out OUT_USB     &bt_0            &bt_1              &bt_2            &bt_3            &bt_4                                                                                         &kp SCROLLLOCK         &kp KP_NUM       &kp KP_EQUAL               &kp KP_DIVIDE               &kp KP_MULTIPLY            &out OUT_USB
-&kp INS          &kp SLASH        &kp ASTERISK       &kp AMPERSAND    &kp GRAVE        &kp LEFT_PARENTHESIS                                                                          &kp RIGHT_PARENTHESIS  &kp KP_N7        &kp KP_N8                  &kp KP_N9                   &kp KP_MINUS               &trans
-&kp ENTER        &kp HASH         &kp LS(NUMBER_4)   &kp RA(N5)       &kp AT_SIGN      &kp LEFT_BRACKET                                                                              &kp RIGHT_BRACKET      &kp KP_N4        &kp KP_N5                  &kp KP_N6                   &symtap COLON KP_NUMBER_0  &trans
-&kp PLUS         &kp PERCENT      &kp RA(SEMICOLON)  &kp TILDE        &kp CARET        &kp LEFT_BRACE        &tap_layer_hold_mod LEFT_ALT 0  &trans  &trans  &trans  &trans  &trans  &kp RIGHT_BRACE        &kp KP_N1        &symtap COMMA KP_NUMBER_2  &symtap PERIOD KP_NUMBER_3  &kp SLASH                  &trans
-&bl BL_ON        &bl BL_OFF       &bl BL_CYCLE       &none            &bt BT_CLR                             &to 0                           &trans  &trans  &trans  &trans  &trans                         &none            &none                      &none                       &none                      &trans
+&rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                                                                                           &rgb_ug RGB_BRI  &rgb_ug RGB_BRD            &rgb_ug RGB_SAI             &rgb_ug RGB_SAD            &none
+&out OUT_USB     &bt_0            &bt_1              &bt_2            &bt_3            &bt_4                                                                                    &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL               &kp KP_DIVIDE               &kp KP_MULTIPLY            &out OUT_USB
+&kp INS          &kp SLASH        &kp ASTERISK       &kp AMPERSAND    &kp GRAVE        &none                                                                                    &none           &kp KP_N7        &kp KP_N8                  &kp KP_N9                   &kp KP_MINUS               &trans
+&kp ENTER        &kp HASH         &kp LS(NUMBER_4)   &kp RA(N5)       &kp AT_SIGN      &kp EXCLAMATION                                                                          &none           &kp KP_N4        &kp KP_N5                  &kp KP_N6                   &symtap COLON KP_NUMBER_0  &trans
+&kp PLUS         &kp PERCENT      &kp RA(SEMICOLON)  &kp TILDE        &kp CARET        &none            &tap_layer_hold_mod LEFT_ALT 0  &trans  &trans  &trans  &trans  &trans  &none           &kp KP_N1        &symtap COMMA KP_NUMBER_2  &symtap PERIOD KP_NUMBER_3  &kp SLASH                  &trans
+&bl BL_ON        &bl BL_OFF       &bl BL_CYCLE       &none            &bt BT_CLR                        &to 0                           &trans  &trans  &trans  &trans  &trans                  &none            &none                      &none                       &none                      &trans
             >;
         };
 
         ALT-SYM {
             bindings = <
-&none     &none      &none  &none      &none                                                                               &none                  &none          &none      &none                 &none
-&none     &none      &none  &none      &none                 &none                                                  &none  &none                  &none          &none      &none                 &none
-&none     &none      &none  &none      &kp LEFT_PARENTHESIS  &none                                                  &none  &kp RIGHT_PARENTHESIS  &kp RA(U)      &none      &none                 &none
-&none     &kp RA(A)  &none  &kp RA(S)  &kp LEFT_BRACKET      &none                                                  &none  &kp RIGHT_BRACKET      &none          &none      &kp RA(O)             &kp DOUBLE_QUOTES
-&kp PLUS  &none      &none  &none      &kp LEFT_BRACE        &none  &none   &none   &none   &none   &none   &none   &none  &kp RIGHT_BRACE        &kp SEMICOLON  &kp COLON  &kp NON_US_BACKSLASH  &kp PIPE
-&none     &none      &none  &none      &none                        &trans  &trans  &trans  &trans  &trans  &trans         &none                  &none          &none      &none                 &none
-            >;
-        };
-
-        ALT-SYM2 {
-            bindings = <
-&trans  &trans     &trans  &trans     &trans                                                                                &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans     &trans                &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans     &kp LEFT_PARENTHESIS  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp RA(A)  &trans  &kp RA(S)  &kp LEFT_BRACKET      &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans     &kp LEFT_BRACE        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans     &trans                        &to 0   &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&none     &none      &none  &none      &none                                                                                                &none                  &none          &none      &none                 &none
+&none     &none      &none  &none      &none                 &none                                                            &none         &none                  &none          &none      &none                 &none
+&none     &none      &none  &none      &kp LEFT_PARENTHESIS  &none                                                            &none         &kp RIGHT_PARENTHESIS  &kp RA(U)      &none      &none                 &none
+&none     &kp RA(A)  &none  &kp RA(S)  &kp LEFT_BRACKET      &kp EXCLAMATION                                                  &kp QUESTION  &kp RIGHT_BRACKET      &none          &none      &kp RA(O)             &kp DOUBLE_QUOTES
+&kp PLUS  &none      &none  &none      &kp LEFT_BRACE        &none            &to 0   &none   &none   &none   &none   &none   &none         &kp RIGHT_BRACE        &kp SEMICOLON  &kp COLON  &kp NON_US_BACKSLASH  &kp PIPE
+&none     &none      &none  &none      &none                                  &trans  &trans  &trans  &trans  &trans  &trans                &none                  &none          &none      &none                 &none
             >;
         };
 
@@ -361,7 +350,7 @@
 &kp LCTRL       &kp Q   &kp W   &kp F   &kp P   &kp B                                                                         &kp J   &kp L   &kp U      &kp Y    &kp MINUS  &trans
 &kp TAB         &kp A   &kp R   &kp S   &kp T   &kp G                                                                         &kp M   &kp N   &kp E      &kp I    &kp O      &trans
 &kp LEFT_SHIFT  &kp Z   &kp X   &kp C   &kp D   &kp V   &kp LEFT_ALT  &kp ESCAPE     &trans  &trans  &trans   &trans          &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH   &trans
-&trans          &trans  &trans  &trans  &trans          &kp SPACE     &kp BACKSPACE  &mo 5   &trans  &kp DEL  &kp LEFT_SHIFT          &trans  &trans     &trans   &trans     &trans
+&trans          &trans  &trans  &trans  &trans          &kp SPACE     &kp BACKSPACE  &mo 4   &trans  &kp DEL  &kp LEFT_SHIFT          &trans  &trans     &trans   &trans     &trans
             >;
         };
 
@@ -373,17 +362,6 @@
 &none       &kp O           &kp I       &kp E      &kp N   &kp M                                                                        &none  &none  &none  &none  &none  &none
 &none       &kp FSLH        &kp DOT     &kp COMMA  &kp H   &kp K   &symtap LCTRL DEL  &symtap LS(END) END  &trans  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &superplay  &kp C_PREVIOUS  &kp C_NEXT  &kp DOWN   &kp UP          &sk LEFT_SHIFT     &symtap LS(END) END  &trans  &none  &none  &none         &none  &none  &none  &none  &none
-            >;
-        };
-
-        FunctionKeys {
-            bindings = <
-&trans  &trans   &trans   &trans   &trans                                                                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &trans   &trans   &trans                                                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                                                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &kp LALT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &trans   &trans            &trans    &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
