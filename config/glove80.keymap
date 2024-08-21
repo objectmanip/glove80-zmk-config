@@ -203,35 +203,6 @@
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
 
-        email: email {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F &kp L &kp O &kp R &kp I &kp A &kp N &kp E &kp R &kp W &kp I &kp N &kp B &kp L &kp U &kp E &kp M &kp E &kp L &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
-            label = "EMAIL";
-        };
-
-        fhmail: fhmail {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F &kp L &kp O &kp R &kp I &kp A &kp N &kp DOT &kp B &kp L &kp U &kp E &kp M &kp E &kp L &kp AT &kp H &kp MINUS &kp B &kp R &kp S &kp DOT &kp D &kp E>;
-            label = "FHMAIL";
-        };
-
-        fhaddr: fhaddr {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(F) &kp L &kp O &kp R &kp I &kp A &kp N &kp SPACE &kp LS(B) &kp L &kp M &kp E &kp L &kp COMMA &kp SPACE &kp LS(H) &kp O &kp C &kp H &kp S &kp C &kp H &kp U &kp L &kp E &kp SPACE &kp LS(B) &kp O &kp N &kp N &kp MINUS &kp LS(R) &kp H &kp E &kp I &kp N &kp MINUS &kp LS(S) &kp I &kp E &kp G &kp COMMA &kp SPACE &kp LS(G) &kp R &kp A &kp N &kp T &kp H &kp A &kp M &kp MINUS &kp LS(A) &kp L &kp L &kp E &kp E &kp SPACE &kp N2 &kp N0 &kp COMMA &kp SPACE &kp N5 &kp N3 &kp N7 &kp N5 &kp N7 &kp SPACE &kp LS(S) &kp A &kp N &kp K &kp T &kp SPACE &kp LS(A) &kp U &kp G &kp U &kp S &kp T &kp I &kp N>;
-            label = "FHADDR";
-        };
-
-        rust_endline: rust_endline {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp END &kp SEMICOLON &kp ENTER>;
-
-            label = "RUST_ENDLINE";
-        };
-
         openconslohere: openconslohere {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -251,13 +222,6 @@
             #binding-cells = <0>;
             bindings = <&kp LCTRL &kp LCTRL &kp RALT &kp RALT &kp LEFT_SHIFT &kp RSHIFT &kp LEFT_ALT &kp LALT>;
             label = "UNSTUCK";
-        };
-
-        close_tab_and_swap: close_tab_and_swap {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(W) &kp LA(TAB)>;
-            label = "CLOSE_TAB_AND_SWAP";
         };
     };
 
