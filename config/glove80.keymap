@@ -7,15 +7,20 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
 
 // layers
 
 #define DEFAULT 0
 #define LOWER 1
 #define MAGIC 2
+
+&sk {
+    release-after-ms = <800>;
+    quick-release;
+};
 
 / {
     behaviors {
@@ -47,6 +52,130 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        symtap: symtap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SYMTAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+        };
+
+        supervolup: supervolup {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SUPERVOLUP";
+            #binding-cells = <0>;
+            bindings = <&symtap C_VOL_UP C_VOL_UP>, <&symtap F12 C_VOL_UP>;
+        };
+
+        supervoldown: supervoldown {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SUPERVOLDOWN";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOL_DN>, <&kp C_MUTE>;
+        };
+
+        superplay: superplay {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SUPERPLAY";
+            #binding-cells = <0>;
+            bindings = <&symtap LS(F10) C_PLAY_PAUSE>, <&kp LC(F2)>;
+        };
+
+        sk_normal: sk_normal {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SK_NORMAL";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <500>;
+        };
+
+        sticky_hold: sticky_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STICKY_HOLD";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+        };
+
+        sl_hold: sl_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SL_HOLD";
+            bindings = <&kp>, <&sl>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+        };
+
+        sym_caps: sym_caps {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SYM_CAPS";
+            bindings = <&caps_word>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+        };
+
+        unstuck_tap: unstuck_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "UNSTUCK_TAP";
+            bindings = <&unstuck>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            flavor = "tap-preferred";
+        };
+
+        long_tap: long_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LONG_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+        };
+
+        sticky_mod: sticky_mod {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_MOD";
+            bindings = <&sk>;
+            #binding-cells = <1>;
+            release-after-ms = <150>;
+        };
+
+        layer_mod: layer_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_MOD";
+            bindings = <&kp>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        left_alt: left_alt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LEFT_ALT";
+            #binding-cells = <0>;
+            bindings = <&layer_mod LEFT_ALT 2>, <&to 2>;
+        };
+
+        layer_tap_custom: layer_tap_custom {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_CUSTOM";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -74,79 +203,46 @@
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
 
-        email: email {
+        openconslohere: openconslohere {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F &kp L &kp O &kp R &kp I &kp A &kp N &kp E &kp R &kp W &kp I &kp N &kp B &kp L &kp U &kp E &kp M &kp E &kp L &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
-            label = "EMAIL";
+            bindings = <&kp LC(L) &kp C &kp M &kp D &kp ENTER>;
+            label = "OPENCONSLOHERE";
         };
 
-        fhmail: fhmail {
+        bt_4: bt_4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F &kp L &kp O &kp R &kp I &kp A &kp N &kp DOT &kp B &kp L &kp U &kp E &kp M &kp E &kp L &kp AT &kp H &kp MINUS &kp B &kp R &kp S &kp DOT &kp D &kp E>;
-            label = "FHMAIL";
+            bindings = <&out OUT_BLE &bt BT_SEL 4>;
+            label = "BT_4";
         };
 
-        fhaddr: fhaddr {
+        unstuck: unstuck {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(F) &kp L &kp O &kp R &kp I &kp A &kp N &kp SPACE &kp LS(B) &kp L &kp M &kp E &kp L &kp COMMA &kp SPACE &kp LS(H) &kp O &kp C &kp H &kp S &kp C &kp H &kp U &kp L &kp E &kp SPACE &kp LS(B) &kp O &kp N &kp N &kp MINUS &kp LS(R) &kp H &kp E &kp I &kp N &kp MINUS &kp LS(S) &kp I &kp E &kp G &kp COMMA &kp SPACE &kp LS(G) &kp R &kp A &kp N &kp T &kp H &kp A &kp M &kp MINUS &kp LS(A) &kp L &kp L &kp E &kp E &kp SPACE &kp N2 &kp N0 &kp COMMA &kp SPACE &kp N5 &kp N3 &kp N7 &kp N5 &kp N7 &kp SPACE &kp LS(S) &kp A &kp N &kp K &kp T &kp SPACE &kp LS(A) &kp U &kp G &kp U &kp S &kp T &kp I &kp N>;
-            label = "FHADDR";
-        };
-
-        rust_endline: rust_endline {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp END &kp SEMICOLON &kp ENTER>;
-
-            label = "RUST_ENDLINE";
+            bindings = <&kp LCTRL &kp LCTRL &kp RALT &kp RALT &kp LEFT_SHIFT &kp RSHIFT &kp LEFT_ALT &kp LALT>;
+            label = "UNSTUCK";
         };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        rst-l1 {
-            bindings = <&to 1>;
-            key-positions = <36 37 38>;
-            layers = <0>;
-        };
-
-        ien-l1 {
-            bindings = <&to 1>;
-            key-positions = <41 42 43>;
-        };
-
         rft-gaming {
-            bindings = <&to 2>;
+            bindings = <&to 3>;
             key-positions = <38 36 25>;
             layers = <0>;
         };
 
-        tn-sym {
-            bindings = <&mo 1>;
-            key-positions = <41 38>;
+        layer0 {
+            bindings = <&to 0>;
+            key-positions = <41 42 37 38>;
+            layers = <1 3 4>;
         };
 
-        agm-email {
-            bindings = <&email>;
-            key-positions = <39 40 35>;
-        };
-
-        fhe-fhmail {
-            bindings = <&fhmail>;
-            key-positions = <25 59 42>;
-        };
-
-        fha-fhaddr {
-            bindings = <&fhaddr>;
-            key-positions = <25 35 59>;
-        };
-
-        neovim_nav {
-            bindings = <&mo 0>;
-            key-positions = <38 37>;
+        layer0-2 {
+            bindings = <&to 0>;
+            key-positions = <36 37 38>;
         };
     };
 
@@ -163,56 +259,56 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1                &kp F2           &kp F3           &kp F4           &kp F5                                                                                                                                                                                                                    &kp F6                   &kp F7               &kp F8            &kp F9               &kp F10
-&kp ESCAPE            &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F4 NUMBER_4         &mt F5 N5                                                                                                                                                                        &mt F6 NUMBER_6  &mt F7 N7                &mt F8 N8            &mt F9 N9         &mt F10 N0           &kp F11
-&kp TAB               &kp Q            &kp W            &kp F            &mt LEFT_PARENTHESIS P  &kp B                                                                                                                                                                            &kp J            &mt RIGHT_PARENTHESIS L  &kp U                &kp Y             &kp MINUS            &kp SEMICOLON
-&mt LCTRL SQT         &kp A            &kp R            &kp S            &mt LEFT_BRACKET T      &kp G                                                                                                                                                                            &kp M            &mt RIGHT_BRACKET N      &kp E                &kp I             &kp O                &kp LEFT_BRACKET
-&mt LEFT_SHIFT EQUAL  &kp Z            &kp X            &kp C            &mt LEFT_BRACE D        &mt EXCLAMATION V  &tap_layer_hold_mod LALT 1  &mt LS(HOME) HOME    &mt LEFT_GUI LG(LS(F1))      &mt LEFT_WIN LS(LG(F1))      &mt LS(END) END   &tap_layer_hold_mod RIGHT_ALT 4  &mt QUESTION K   &mt RIGHT_BRACE H        &mt SEMICOLON COMMA  &mt COLON PERIOD  &mt BACKSLASH SLASH  &kp RIGHT_BRACKET
-&kp LC(LA(F13))       &kp HOME         &kp END          &kp LEFT         &kp RIGHT                                  &lt 1 SPACE                 &mt LCTRL BACKSPACE  &rust_el LS(LC(LEFT_ALT)) 0  &rust_el LS(LC(LEFT_ALT)) 0  &mt LCTRL DELETE  &mt LEFT_SHIFT ENTER                              &kp UP                   &kp DOWN             &kp C_PREVIOUS    &kp C_NEXT           &kp C_PLAY
+&kp F1                &kp F2                &kp F3             &kp F4                 &kp F5                                                                                                                                                                                                                      &kp F6                       &kp F7                   &kp F8                &kp F9                          &kp F10
+&kp LA(LC(F13))       &symtap F1 N1         &symtap F2 N2      &symtap F3 N3          &symtap F4 NUMBER_4         &symtap F5 N5                                                                                                                                                              &symtap F6 NUMBER_6  &symtap F7 N7                &symtap F8 N8            &symtap F9 N9         &symtap F10 N0                  &unstuck_tap 0 F11
+&kp ESCAPE            &kp Q                 &kp W              &kp F                  &symtap LEFT_PARENTHESIS P  &kp B                                                                                                                                                                      &kp J                &symtap RIGHT_PARENTHESIS L  &kp U                    &kp Y                 &kp MINUS                       &symtap F12 ENTER
+&mt LCTRL TAB         &long_tap LEFT_GUI A  &long_tap LCTRL R  &layer_tap_custom 2 S  &symtap LEFT_BRACKET T      &symtap EXCLAMATION G                                                                                                                                                      &symtap QUESTION M   &symtap RIGHT_BRACKET N      &layer_tap_custom 2 E    &long_tap LCTRL I     &long_tap LEFT_GUI O            &kp SQT
+&mt LEFT_SHIFT EQUAL  &kp Z                 &kp X              &kp C                  &symtap LEFT_BRACE D        &kp V                  &layer_mod LEFT_ALT 2  &symtap LS(HOME) HOME    &kp LEFT_GUI                  &symtap LEFT_GUI TAB          &symtap LS(END) END  &layer_mod RALT 2  &kp K                &symtap RIGHT_BRACE H        &symtap SEMICOLON COMMA  &symtap COLON PERIOD  &symtap NON_US_BACKSLASH SLASH  &sym_caps 0 NON_US_BACKSLASH
+&kp LA(LC(F13))       &supervoldown         &supervolup        &kp LEFT               &kp RIGHT                                          &lt 1 SPACE            &symtap LCTRL BACKSPACE  &mt LA(LS(RCTRL)) LG(LS(F1))  &symtap LS(LA(RCTRL)) ESCAPE  &symtap LCTRL DEL    &sk LEFT_SHIFT                          &kp UP                       &kp DOWN                 &kp C_PREVIOUS        &kp C_NEXT                      &superplay
             >;
         };
 
         SYMNUM {
             bindings = <
-&none          &none        &none              &none          &none                                                                                                                             &none       &none         &none          &none            &none
-&trans         &none        &none              &none          &none        &none                                                                                         &none                  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &none
-&trans         &kp SLASH    &kp ASTERISK       &kp AMPERSAND  &kp GRAVE    &kp LEFT_PARENTHESIS                                                                          &kp RIGHT_PARENTHESIS  &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp C_VOLUME_UP
-&kp LS(SQT)    &kp HASH     &kp LS(NUMBER_4)   &kp RA(N5)     &kp AT_SIGN  &kp LEFT_BRACKET                                                                              &kp RIGHT_BRACKET      &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_NUMBER_0  &kp C_PP
-&kp LS(EQUAL)  &kp PERCENT  &kp RA(SEMICOLON)  &kp TILDE      &kp CARET    &kp LEFT_BRACE        &tap_layer_hold_mod LEFT_ALT 0  &trans  &trans  &trans  &trans  &trans  &kp RIGHT_BRACE        &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp C_VOLUME_DOWN
-&trans         &none        &none              &none          &none                              &trans                          &trans  &trans  &trans  &trans  &trans                         &none       &none         &none          &none            &trans
+&rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                                                                                           &rgb_ug RGB_BRI  &rgb_ug RGB_BRD            &rgb_ug RGB_SAI             &rgb_ug RGB_SAD            &none
+&out OUT_USB     &bt_0            &bt_1              &bt_2            &bt_3            &bt_4                                                                                    &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL               &kp KP_DIVIDE               &kp KP_MULTIPLY            &out OUT_USB
+&kp INS          &kp SLASH        &kp ASTERISK       &kp AMPERSAND    &kp GRAVE        &kp PAGE_UP                                                                              &kp PAGE_UP     &kp KP_N7        &kp KP_N8                  &kp KP_N9                   &kp KP_MINUS               &trans
+&kp ENTER        &kp HASH         &kp LS(NUMBER_4)   &kp RA(N5)       &kp AT_SIGN      &kp EXCLAMATION                                                                          &none           &kp KP_N4        &kp KP_N5                  &kp KP_N6                   &symtap COLON KP_NUMBER_0  &trans
+&kp PLUS         &kp PERCENT      &kp RA(SEMICOLON)  &kp TILDE        &kp CARET        &kp PAGE_DOWN    &tap_layer_hold_mod LEFT_ALT 0  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN   &kp KP_N1        &symtap COMMA KP_NUMBER_2  &symtap PERIOD KP_NUMBER_3  &kp SLASH                  &trans
+&bl BL_ON        &bl BL_OFF       &bl BL_CYCLE       &none            &bt BT_CLR                        &to 0                           &trans  &trans  &trans  &trans  &trans                  &none            &none                      &none                       &none                      &trans
             >;
         };
 
-        GAMES1 {
+        ALT-SYM {
             bindings = <
-&trans      &trans  &trans          &trans            &trans                                                                             &trans  &trans     &trans   &trans     &trans
-&kp ESCAPE  &kp N1  &kp N2          &kp N3            &kp N4      &kp N5                                                         &kp N6  &kp N7  &kp N8     &kp N9   &kp N0     &kp F11
-&kp TAB     &kp Q   &kp W           &kp F             &kp P       &kp B                                                          &kp J   &kp L   &kp U      &kp Y    &kp MINUS  &trans
-&kp LCTRL   &kp A   &kp R           &kp S             &kp T       &kp G                                                          &kp M   &kp N   &kp E      &kp I    &kp O      &trans
-&kp LSHFT   &kp X   &kp Z           &kp C             &kp D       &kp V   &trans    &trans     &trans  &trans  &trans   &trans   &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH   &trans
-&trans      &trans  &kp K_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT          &kp BSPC  &kp SPACE  &mo 3   &trans  &kp RET  &kp DEL          &trans  &trans     &trans   &trans     &trans
+&none     &none      &none  &none      &none                                                                                                 &none                  &none          &none      &none                 &none
+&none     &none      &none  &none      &none                 &none                                                            &none          &none                  &none          &none      &none                 &none
+&none     &none      &none  &none      &kp LEFT_PARENTHESIS  &kp PAGE_UP                                                      &kp PAGE_UP    &kp RIGHT_PARENTHESIS  &kp RA(U)      &none      &none                 &none
+&none     &kp RA(A)  &none  &kp RA(S)  &kp LEFT_BRACKET      &kp EXCLAMATION                                                  &kp QUESTION   &kp RIGHT_BRACKET      &none          &none      &kp RA(O)             &kp DOUBLE_QUOTES
+&kp PLUS  &none      &none  &none      &kp LEFT_BRACE        &kp PAGE_DOWN    &to 0   &none   &none   &none   &none   &none   &kp PAGE_DOWN  &kp RIGHT_BRACE        &kp SEMICOLON  &kp COLON  &kp NON_US_BACKSLASH  &kp PIPE
+&none     &none      &none  &none      &none                                  &trans  &trans  &trans  &trans  &trans  &trans                 &none                  &none          &none      &none                 &none
             >;
         };
 
-        GAMES2 {
+        One-Handed1 {
             bindings = <
-&none  &none      &none    &none      &none                                                            &none  &none  &none  &none  &none
-&none  &kp N0     &kp N9   &kp N8     &kp N7  &kp N6                                            &none  &none  &none  &none  &none  &none
-&none  &kp MINUS  &kp Y    &kp U      &kp L   &kp J                                             &none  &none  &none  &none  &none  &none
-&none  &kp O      &kp I    &kp E      &kp N   &kp M                                             &none  &none  &none  &none  &none  &none
-&none  &kp FSLH   &kp DOT  &kp COMMA  &kp H   &kp K   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none      &none    &none      &none           &none  &none  &none  &none  &none  &none         &none  &none  &none  &none  &none
+&trans          &trans  &trans  &trans  &trans                                                                                        &trans  &trans     &trans   &trans     &trans
+&trans          &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                                        &kp N6  &kp N7  &kp N8     &kp N9   &kp N0     &kp F11
+&kp ESCAPE      &kp Q   &kp W   &kp F   &kp P   &kp B                                                                         &kp J   &kp L   &kp U      &kp Y    &kp MINUS  &trans
+&kp TAB         &kp A   &kp R   &kp S   &kp T   &kp G                                                                         &kp M   &kp N   &kp E      &kp I    &kp O      &trans
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C   &kp D   &kp V   &kp LEFT_ALT  &kp LCTRL      &trans  &trans  &trans   &trans          &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH   &trans
+&trans          &trans  &trans  &trans  &trans          &kp SPACE     &kp BACKSPACE  &mo 4   &trans  &kp DEL  &kp LEFT_SHIFT          &trans  &trans     &trans   &trans     &trans
             >;
         };
 
-        NAVLOCK {
+        One-Handed2 {
             bindings = <
-&bootloader        &bt_0       &bt_1       &bt_2       &bt_3                                                                                                                   &none           &none           &none            &none      &none
-&ext_power EP_TOG  &bl BL_TOG  &bl BL_DEC  &bl BL_INC  &bl BL_CYCLE  &bl BL_SET 20                                                                          &none              &none           &none           &none            &none      &none
-&none              &none       &kp N7      &kp N8      &kp N9        &none                                                                                  &kp K_SCROLL_UP    &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN    &none      &none
-&none              &kp N0      &kp N4      &kp N5      &kp N6        &none                                                                                  &kp K_SCROLL_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL  &none
-&none              &none       &kp N1      &kp N3      &kp N2        &none          &out OUT_TOG  &none  &none  &none         &none           &kp LEFT_ALT  &none              &none           &none           &none            &none      &none
-&none              &none       &none       &none       &none                        &to 0         &to 2  &none  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp ESCAPE                       &none           &none           &none            &none      &none
+&none       &none           &none       &none      &none                                                                                       &none  &none  &none  &none  &none
+&none       &kp N0          &kp N9      &kp N8     &kp N7  &kp N6                                                                       &none  &none  &none  &none  &none  &none
+&kp ENTER   &kp MINUS       &kp Y       &kp U      &kp L   &kp J                                                                        &none  &none  &none  &none  &none  &none
+&none       &kp O           &kp I       &kp E      &kp N   &kp M                                                                        &none  &none  &none  &none  &none  &none
+&none       &kp FSLH        &kp DOT     &kp COMMA  &kp H   &kp K   &symtap LCTRL DEL  &symtap LS(END) END  &trans  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&superplay  &kp C_PREVIOUS  &kp C_NEXT  &kp DOWN   &kp UP          &sk LEFT_SHIFT     &symtap LS(END) END  &trans  &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
     };
