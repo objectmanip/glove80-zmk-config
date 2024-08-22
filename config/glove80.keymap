@@ -44,15 +44,6 @@
             tapping-term-ms = <200>;
         };
 
-        rust_el: rust_el {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RUST_EL";
-            bindings = <&kp>, <&rust_endline>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         symtap: symtap {
             compatible = "zmk,behavior-hold-tap";
             label = "SYMTAP";
