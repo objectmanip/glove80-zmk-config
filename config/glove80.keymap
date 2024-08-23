@@ -260,23 +260,23 @@
 
         SYMNUM {
             bindings = <
-&rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                                                                   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD            &rgb_ug RGB_SAI             &rgb_ug RGB_SAD            &none
-&out OUT_USB     &bt_0            &bt_1              &bt_2            &bt_3            &bt_4                                                            &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL               &kp KP_DIVIDE               &kp KP_MULTIPLY            &out OUT_USB
-&kp INS          &kp SLASH        &kp ASTERISK       &kp AMPERSAND    &kp GRAVE        &kp PAGE_UP                                                      &kp PAGE_UP     &kp KP_N7        &kp KP_N8                  &kp KP_N9                   &kp KP_MINUS               &trans
-&kp ENTER        &kp HASH         &kp LS(NUMBER_4)   &kp RA(N5)       &kp AT_SIGN      &kp EXCLAMATION                                                  &kp QUESTION    &kp KP_N4        &kp KP_N5                  &kp KP_N6                   &symtap COLON KP_NUMBER_0  &trans
-&kp PLUS         &kp PERCENT      &kp RA(SEMICOLON)  &kp TILDE        &kp CARET        &kp PAGE_DOWN    &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN   &kp KP_N1        &symtap COMMA KP_NUMBER_2  &symtap PERIOD KP_NUMBER_3  &kp SLASH                  &trans
-&bl BL_ON        &bl BL_OFF       &bl BL_CYCLE       &none            &bt BT_CLR                        &to 0   &trans  &trans  &trans  &trans  &trans                  &none            &none                      &none                       &none                      &trans
+&rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                                                                   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none
+&out OUT_USB     &bt_0            &bt_1              &bt_2            &bt_3            &bt_4                                                            &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &out OUT_USB
+&kp INS          &kp SLASH        &kp ASTERISK       &kp AMPERSAND    &kp GRAVE        &kp PAGE_UP                                                      &kp PAGE_UP     &kp KP_N7        &kp KP_N8        &kp KP_N9        &kp KP_MINUS     &trans
+&kp ENTER        &kp HASH         &kp LS(NUMBER_4)   &kp RA(N5)       &kp AT_SIGN      &kp EXCLAMATION                                                  &kp COLON       &kp KP_N4        &kp KP_N5        &kp KP_N6        &kp KP_NUMBER_0  &trans
+&kp PLUS         &kp PERCENT      &kp RA(SEMICOLON)  &kp TILDE        &kp CARET        &kp PAGE_DOWN    &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH        &trans
+&bl BL_ON        &bl BL_OFF       &bl BL_CYCLE       &none            &bt BT_CLR                        &to 0   &trans  &trans  &trans  &trans  &trans                  &none            &none            &none            &none            &trans
             >;
         };
 
         ALT-SYM {
             bindings = <
-&none     &none      &none  &none      &none                                                                                                 &none                  &none          &none      &none                 &none
-&none     &none      &none  &none      &none                 &none                                                            &none          &none                  &none          &none      &none                 &none
-&none     &none      &none  &none      &kp LEFT_BRACKET      &kp PAGE_UP                                                      &kp PAGE_UP    &kp RIGHT_BRACKET      &kp RA(U)      &none      &none                 &none
-&none     &kp RA(A)  &none  &kp RA(S)  &kp LEFT_PARENTHESIS  &kp EXCLAMATION                                                  &kp QUESTION   &kp RIGHT_PARENTHESIS  &none          &none      &kp RA(O)             &kp DOUBLE_QUOTES
-&kp PLUS  &none      &none  &none      &kp LBRC              &kp PAGE_DOWN    &to 0   &none   &none   &none   &none   &none   &kp PAGE_DOWN  &kp RBRC               &kp SEMICOLON  &kp COLON  &kp NON_US_BACKSLASH  &kp PIPE
-&none     &none      &none  &none      &none                                  &trans  &trans  &trans  &trans  &trans  &trans                 &none                  &none          &none      &none                 &none
+&none     &none      &none            &none      &none                                                                                                 &none                  &none          &none         &none                 &none
+&none     &none      &none            &none      &none                 &none                                                            &none          &none                  &none          &none         &none                 &none
+&none     &none      &none            &none      &kp LEFT_BRACKET      &kp PAGE_UP                                                      &kp PAGE_UP    &kp RIGHT_BRACKET      &kp RA(U)      &none         &none                 &none
+&none     &kp RA(A)  &kp EXCLAMATION  &kp RA(S)  &kp LEFT_PARENTHESIS  &kp EXCLAMATION                                                  &kp COLON      &kp RIGHT_PARENTHESIS  &none          &kp QUESTION  &kp RA(O)             &kp DOUBLE_QUOTES
+&kp PLUS  &none      &none            &none      &kp LBRC              &kp PAGE_DOWN    &to 0   &none   &none   &none   &none   &none   &kp PAGE_DOWN  &kp RBRC               &kp SEMICOLON  &kp COLON     &kp NON_US_BACKSLASH  &kp PIPE
+&none     &none      &none            &none      &none                                  &trans  &trans  &trans  &trans  &trans  &trans                 &none                  &none          &none         &none                 &none
             >;
         };
 
