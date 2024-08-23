@@ -234,6 +234,16 @@
             key-positions = <38 41>;
             layers = <0>;
         };
+
+        exclamation {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <37 38>;
+        };
+
+        question {
+            bindings = <&kp QUESTION>;
+            key-positions = <41 42>;
+        };
     };
 
     keymap {
