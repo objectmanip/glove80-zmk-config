@@ -213,7 +213,7 @@
         compatible = "zmk,combos";
 
         rft-gaming {
-            bindings = <&to 4>;
+            bindings = <&to 3>;
             key-positions = <38 36 25>;
             layers = <0>;
         };
@@ -221,7 +221,7 @@
         layer0 {
             bindings = <&to 0>;
             key-positions = <41 42 37 38>;
-            layers = <1 4 5>;
+            layers = <1 3 4>;
         };
 
         layer0-2 {
@@ -274,17 +274,6 @@
             >;
         };
 
-        F-Keys {
-            bindings = <
-&trans  &trans   &trans   &trans   &trans                                                                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &trans   &trans   &trans                                                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                                                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &trans   &trans            &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
         One-Handed1 {
             bindings = <
 &trans          &trans  &trans  &trans  &trans                                                                                        &trans  &trans     &trans   &trans     &trans
@@ -292,7 +281,7 @@
 &kp ESCAPE      &kp Q   &kp W   &kp F   &kp P   &kp B                                                                         &kp J   &kp L   &kp U      &kp Y    &kp MINUS  &trans
 &kp TAB         &kp A   &kp R   &kp S   &kp T   &kp G                                                                         &kp M   &kp N   &kp E      &kp I    &kp O      &trans
 &kp LEFT_SHIFT  &kp Z   &kp X   &kp C   &kp D   &kp V   &kp LEFT_ALT  &kp LCTRL      &trans  &trans  &trans   &trans          &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH   &trans
-&trans          &trans  &trans  &trans  &trans          &kp SPACE     &kp BACKSPACE  &mo 5   &trans  &kp DEL  &kp LEFT_SHIFT          &trans  &trans     &trans   &trans     &trans
+&trans          &trans  &trans  &trans  &trans          &kp SPACE     &kp BACKSPACE  &mo 4   &trans  &kp DEL  &kp LEFT_SHIFT          &trans  &trans     &trans   &trans     &trans
             >;
         };
 
