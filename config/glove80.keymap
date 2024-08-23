@@ -269,7 +269,7 @@
 &none     &none      &none  &none      &none                 &none                                                            &none          &none                  &none          &none      &none                 &none
 &none     &none      &none  &none      &kp LEFT_BRACKET      &kp PAGE_UP                                                      &kp PAGE_UP    &kp RIGHT_BRACKET      &kp RA(U)      &none      &none                 &none
 &none     &kp RA(A)  &none  &kp RA(S)  &kp LEFT_PARENTHESIS  &kp EXCLAMATION                                                  &kp QUESTION   &kp RIGHT_PARENTHESIS  &none          &none      &kp RA(O)             &kp DOUBLE_QUOTES
-&kp PLUS  &none      &none  &none      &kp LEFT_BRACE        &kp PAGE_DOWN    &to 0   &none   &none   &none   &none   &none   &kp PAGE_DOWN  &kp RIGHT_BRACE        &kp SEMICOLON  &kp COLON  &kp NON_US_BACKSLASH  &kp PIPE
+&kp PLUS  &none      &none  &none      &kp LBRC              &kp PAGE_DOWN    &to 0   &none   &none   &none   &none   &none   &kp PAGE_DOWN  &kp RBRC               &kp SEMICOLON  &kp COLON  &kp NON_US_BACKSLASH  &kp PIPE
 &none     &none      &none  &none      &none                                  &trans  &trans  &trans  &trans  &trans  &trans                 &none                  &none          &none      &none                 &none
             >;
         };
