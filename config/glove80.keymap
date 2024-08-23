@@ -228,6 +228,12 @@
             bindings = <&to 0>;
             key-positions = <36 37 38>;
         };
+
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <38 41>;
+            layers = <0>;
+        };
     };
 
     keymap {
