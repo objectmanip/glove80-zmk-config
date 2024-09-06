@@ -278,7 +278,7 @@
             label = "main";
         };
 
-        SYM-NUM {
+        SYMBOLS-NUMPAD {
             bindings = <
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                                                                   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none
 &out OUT_USB     &bt_0            &bt_1              &bt_2            &bt_3            &bt_4                                                            &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &out OUT_USB
@@ -287,9 +287,11 @@
 &kp PLUS         &kp PERCENT      &kp RA(SEMICOLON)  &kp TILDE        &kp CARET        &kp PAGE_DOWN    &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH        &trans
 &bl BL_ON        &bl BL_OFF       &bl BL_CYCLE       &none            &bt BT_CLR                        &to 0   &trans  &trans  &trans  &trans  &trans                  &none            &none            &none            &none            &trans
             >;
+
+            label = "symnum";
         };
 
-        ALT-SYM {
+        Brakets-Symbols {
             bindings = <
 &none     &none      &none            &none      &none                                                                                                 &none                  &none          &none         &none                 &none
 &none     &none      &none            &none      &none                 &none                                                            &none          &none                  &none          &none         &none                 &none
@@ -298,6 +300,8 @@
 &kp PLUS  &none      &none            &none      &kp LBRC              &kp PAGE_DOWN    &to 0   &none   &none   &none   &none   &none   &kp PAGE_DOWN  &kp RBRC               &kp SEMICOLON  &kp COLON     &kp NON_US_BACKSLASH  &kp PIPE
 &none     &none      &none            &none      &none                                  &trans  &trans  &trans  &trans  &trans  &trans                 &none                  &none          &none         &none                 &none
             >;
+
+            label = "brakets";
         };
 
         One-Handed1 {
@@ -309,6 +313,8 @@
 &kp LEFT_SHIFT  &kp Z   &kp X   &kp C   &kp D   &kp V   &kp LEFT_ALT  &kp LCTRL      &trans  &trans  &trans   &trans          &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH   &trans
 &trans          &trans  &trans  &trans  &trans          &kp SPACE     &kp BACKSPACE  &mo 4   &trans  &kp DEL  &kp LEFT_SHIFT          &trans  &trans     &trans   &trans     &trans
             >;
+
+            label = "games";
         };
 
         One-Handed2 {
@@ -320,6 +326,8 @@
 &none       &kp FSLH        &kp DOT     &kp COMMA  &kp H   &kp K   &symtap LCTRL DEL  &symtap LS(END) END  &trans  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &superplay  &kp C_PREVIOUS  &kp C_NEXT  &kp DOWN   &kp UP          &sk LEFT_SHIFT     &symtap LS(END) END  &trans  &none  &none  &none         &none  &none  &none  &none  &none
             >;
+
+            label = "mirror-right";
         };
 
         COLEMAK-APPLE {
