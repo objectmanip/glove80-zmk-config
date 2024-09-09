@@ -275,12 +275,12 @@
 
         Brakets-Symbols {
             bindings = <
-&none     &none      &none            &none      &none                                                                                                 &none                  &none          &none         &none                 &none
-&none     &none      &none            &none      &none                 &none                                                            &none          &none                  &none          &none         &none                 &none
-&none     &none      &none            &none      &kp LEFT_PARENTHESIS  &kp PAGE_UP                                                      &kp PAGE_UP    &kp RIGHT_PARENTHESIS  &kp RA(U)      &none         &none                 &none
-&none     &kp RA(A)  &kp EXCLAMATION  &kp RA(S)  &kp LEFT_BRACKET      &kp EXCLAMATION                                                  &kp COLON      &kp RIGHT_BRACKET      &none          &kp QUESTION  &kp RA(O)             &kp DOUBLE_QUOTES
-&kp PLUS  &none      &none            &none      &kp LBRC              &kp PAGE_DOWN    &to 0   &none   &none   &none   &none   &none   &kp PAGE_DOWN  &kp RBRC               &kp SEMICOLON  &kp COLON     &kp NON_US_BACKSLASH  &kp PIPE
-&none     &none      &none            &none      &none                                  &trans  &trans  &trans  &trans  &trans  &trans                 &none                  &none          &none         &none                 &none
+&trans    &trans     &trans  &trans     &trans                                                                                                &trans                 &trans         &trans     &trans                &trans
+&trans    &trans     &trans  &trans     &trans                &trans                                                           &trans         &trans                 &trans         &trans     &trans                &trans
+&trans    &trans     &trans  &trans     &kp LEFT_PARENTHESIS  &kp PAGE_UP                                                      &kp PAGE_UP    &kp RIGHT_PARENTHESIS  &kp RA(U)      &trans     &trans                &trans
+&trans    &kp RA(A)  &trans  &kp RA(S)  &kp LEFT_BRACKET      &kp EXCLAMATION                                                  &kp COLON      &kp RIGHT_BRACKET      &trans         &trans     &kp RA(O)             &kp DOUBLE_QUOTES
+&kp PLUS  &trans     &trans  &trans     &kp LBRC              &kp PAGE_DOWN    &to 0   &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp RBRC               &kp SEMICOLON  &kp COLON  &kp NON_US_BACKSLASH  &kp PIPE
+&trans    &trans     &trans  &trans     &trans                                 &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans         &trans     &trans                &trans
             >;
 
             label = "brakets";
