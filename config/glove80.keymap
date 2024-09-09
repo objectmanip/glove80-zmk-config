@@ -230,24 +230,6 @@
             layers = <4 3 2 1 5>;
         };
 
-        colon {
-            bindings = <&kp COLON>;
-            key-positions = <38 41>;
-            layers = <0>;
-        };
-
-        exclamation {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <37 38>;
-            layers = <0>;
-        };
-
-        question {
-            bindings = <&kp QUESTION>;
-            key-positions = <41 42>;
-            layers = <0>;
-        };
-
         to-apple {
             bindings = <&to 5>;
             key-positions = <35 26 29>;
