@@ -208,25 +208,11 @@
             label = "UNSTUCK";
         };
 
-        apple_a: apple_a {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(U) &kp A>;
-            label = "APPLE_A";
-        };
-
-        apple_u: apple_u {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(U) &kp U>;
-            label = "APPLE_U";
-        };
-
-        apple_o: apple_o {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(U) &kp O>;
-            label = "APPLE_O";
+        apple_umlaut: apple_umlaut {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LA(U) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "APPLE_UMLAUT";
         };
 
         apple_s: apple_s {
@@ -356,12 +342,24 @@
         Brakets-Symbols-apple {
             label = "brakets-apple";
             bindings = <
-&trans    &trans    &trans  &trans    &trans                                                                                                &trans                 &trans         &trans             &trans                &trans
-&trans    &trans    &trans  &trans    &trans                &trans                                                           &trans         &trans                 &trans         &trans             &trans                &trans
-&trans    &trans    &trans  &trans    &kp LEFT_PARENTHESIS  &kp PAGE_UP                                                      &kp PAGE_UP    &kp RIGHT_PARENTHESIS  &apple_u       &trans             &trans                &trans
-&trans    &apple_a  &trans  &apple_s  &kp LEFT_BRACKET      &kp EXCLAMATION                                                  &kp COLON      &kp RIGHT_BRACKET      &trans         &trans             &apple_o              &kp DOUBLE_QUOTES
-&kp PLUS  &trans    &trans  &trans    &kp LBRC              &kp PAGE_DOWN    &to 0   &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp RBRC               &kp SEMICOLON  &kp LS(SEMICOLON)  &kp NON_US_BACKSLASH  &kp PIPE
-&trans    &trans    &trans  &trans    &trans                                 &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans         &trans             &trans                &trans
+&trans    &trans           &trans  &trans    &trans                                                                                                &trans                 &trans           &trans             &trans                &trans
+&trans    &trans           &trans  &trans    &trans                &trans                                                           &trans         &trans                 &trans           &trans             &trans                &trans
+&trans    &trans           &trans  &trans    &kp LEFT_PARENTHESIS  &kp PAGE_UP                                                      &kp PAGE_UP    &kp RIGHT_PARENTHESIS  &apple_umlaut U  &trans             &trans                &trans
+&trans    &apple_umlaut A  &trans  &apple_s  &kp LEFT_BRACKET      &kp EXCLAMATION                                                  &kp COLON      &kp RIGHT_BRACKET      &trans           &trans             &apple_umlaut O       &kp DOUBLE_QUOTES
+&kp PLUS  &trans           &trans  &trans    &kp LBRC              &kp PAGE_DOWN    &to 0   &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp RBRC               &kp SEMICOLON    &kp LS(SEMICOLON)  &kp NON_US_BACKSLASH  &kp PIPE
+&trans    &trans           &trans  &trans    &trans                                 &trans  &trans  &trans  &trans  &trans  &mo 7                  &trans                 &trans           &trans             &trans                &trans
+            >;
+        };
+
+        Capital-Umlauts-Apple {
+            label = "capital-umplauts-apple";
+            bindings = <
+&trans    &trans               &trans  &trans    &trans                                                                                                &trans                 &trans               &trans             &trans                &trans
+&trans    &trans               &trans  &trans    &trans                &trans                                                           &trans         &trans                 &trans               &trans             &trans                &trans
+&trans    &trans               &trans  &trans    &kp LEFT_PARENTHESIS  &kp PAGE_UP                                                      &kp PAGE_UP    &kp RIGHT_PARENTHESIS  &apple_umlaut LS(U)  &trans             &trans                &trans
+&trans    &apple_umlaut LS(A)  &trans  &apple_s  &kp LEFT_BRACKET      &kp EXCLAMATION                                                  &kp COLON      &kp RIGHT_BRACKET      &trans               &trans             &apple_umlaut LS(O)   &kp DOUBLE_QUOTES
+&kp PLUS  &trans               &trans  &trans    &kp LBRC              &kp PAGE_DOWN    &to 0   &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp RBRC               &kp SEMICOLON        &kp LS(SEMICOLON)  &kp NON_US_BACKSLASH  &kp PIPE
+&trans    &trans               &trans  &trans    &trans                                 &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans               &trans             &trans                &trans
             >;
         };
     };
