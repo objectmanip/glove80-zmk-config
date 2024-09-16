@@ -292,7 +292,7 @@
 &trans    &trans     &trans  &trans     &trans                                                                                                &trans                 &trans         &trans             &trans                &trans
 &trans    &trans     &trans  &trans     &trans                &trans                                                           &trans         &trans                 &trans         &trans             &trans                &trans
 &trans    &trans     &trans  &trans     &kp LEFT_PARENTHESIS  &kp PAGE_UP                                                      &kp PAGE_UP    &kp RIGHT_PARENTHESIS  &kp RA(U)      &trans             &trans                &trans
-&trans    &kp RA(A)  &trans  &kp LA(S)  &kp LEFT_BRACKET      &kp EXCLAMATION                                                  &kp COLON      &kp RIGHT_BRACKET      &trans         &trans             &kp RA(O)             &kp DOUBLE_QUOTES
+&trans    &kp RA(A)  &trans  &kp RA(S)  &kp LEFT_BRACKET      &kp EXCLAMATION                                                  &kp COLON      &kp RIGHT_BRACKET      &trans         &trans             &kp RA(O)             &kp DOUBLE_QUOTES
 &kp PLUS  &trans     &trans  &trans     &kp LBRC              &kp PAGE_DOWN    &to 0   &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp RBRC               &kp SEMICOLON  &kp LS(SEMICOLON)  &kp NON_US_BACKSLASH  &kp PIPE
 &trans    &trans     &trans  &trans     &trans                                 &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans         &trans             &trans                &trans
             >;
