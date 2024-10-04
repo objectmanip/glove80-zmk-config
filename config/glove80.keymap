@@ -11,6 +11,56 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
+// HID-Support
+#include <dt-bindings/zmk/hid.h>
+#include <dt-bindings/zmk/behavior.h>
+#include <dt-bindings/zmk/event_manager.h>
+#include <dt-bindings/zmk/usb.h>
+
+#define CUSTOM_HID_REPORT_ID 0x04
+#define LAYER_SWITCH_CMD 0x01
+
+// HID Report Descriptor
+static const uint8_t custom_hid_report_descriptor[] = {
+    0x06, 0x00, 0xFF,       // Usage Page (Vendor Defined)
+    0x09, 0x01,             // Usage (Vendor Usage 1)
+    0xA1, 0x01,             // Collection (Application)
+    0x85, CUSTOM_HID_REPORT_ID, // Report ID
+    0x09, 0x01,             // Usage (Vendor Usage 1)
+    0x15, 0x00,             // Logical Minimum (0)
+    0x26, 0xFF, 0x00,       // Logical Maximum (255)
+    0x75, 0x08,             // Report Size (8 bits)
+    0x95, 0x01,             // Report Count (1)
+    0x81, 0x02,             // Input (Data, Var, Abs)
+    0xC0                    // End Collection
+};
+
+static int custom_hid_report_received(const uint8_t *report, size_t report_size) {
+    if (report_size < 1) {
+        return -EINVAL;
+    }
+
+    uint8_t command = report[0];
+
+    switch (command) {
+        case LAYER_SWITCH_CMD: // The layer switch command
+            // Add code to switch to the desired layer
+            zmk_keymap_layer_activate(1); // Example: Switch to layer 1
+            break;
+        default:
+            return -EINVAL;
+    }
+
+    return 0;
+}
+
+static void custom_hid_report_listener(void) {
+    zmk_hid_register_report_listener(CUSTOM_HID_REPORT_ID, custom_hid_report_received);
+}
+
+// Call the listener registration function somewhere in the initialization
+custom_hid_report_listener();
+
 // layers
 
 #define DEFAULT 0
