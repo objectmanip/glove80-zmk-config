@@ -293,12 +293,12 @@
 
         SYMBOLS-NUMPAD {
             bindings = <
-&rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                                                                          &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none
-&trans           &to_desktop      &bt_1              &bt_2            &to_phone        &to_ipad                                                                &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &out OUT_USB
-&kp INS          &kp LS(N7)       &kp ASTERISK       &kp AMPERSAND    &kp GRAVE        &kp PAGE_UP                                                             &kp PAGE_UP     &kp KP_N7        &kp KP_N8        &kp KP_N9        &kp KP_MINUS     &trans
-&kp ENTER        &kp BACKSLASH    &kp LS(NUMBER_4)   &kp RA(E)        &kp RA(Q)        &kp EXCLAMATION                                                         &kp COLON       &kp KP_N4        &kp KP_N5        &kp KP_N6        &kp KP_NUMBER_0  &trans
-&kp PLUS         &kp PERCENT      &kp RA(SEMICOLON)  &kp TILDE        &kp CARET        &kp PAGE_DOWN    &trans  &trans  &trans  &to 9   &to 5      &to 3       &kp PAGE_DOWN   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH        &trans
-&bl BL_ON        &bl BL_OFF       &bl BL_CYCLE       &none            &bt BT_CLR                        &to 0   &trans  &trans  &trans  &kp COMMA  &kp PERIOD                  &none            &none            &none            &none            &trans
+&rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_HUD   &rgb_ug RGB_HUI                                                                                          &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none
+&trans           &to_desktop      &bt_1              &bt_2             &to_phone        &to_ipad                                                                &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &out OUT_USB
+&kp INS          &kp LS(N7)       &kp ASTERISK       &kp LS(NUMBER_6)  &kp GRAVE        &kp PAGE_UP                                                             &kp PAGE_UP     &kp KP_N7        &kp KP_N8        &kp KP_N9        &kp KP_MINUS     &trans
+&kp ENTER        &kp BACKSLASH    &kp LS(NUMBER_4)   &kp RA(E)         &kp RA(Q)        &kp EXCLAMATION                                                         &kp COLON       &kp KP_N4        &kp KP_N5        &kp KP_N6        &kp KP_NUMBER_0  &trans
+&kp PLUS         &kp PERCENT      &kp RA(SEMICOLON)  &kp TILDE         &kp CARET        &kp PAGE_DOWN    &trans  &trans  &trans  &to 9   &to 5      &to 3       &kp PAGE_DOWN   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH        &trans
+&bl BL_ON        &bl BL_OFF       &bl BL_CYCLE       &none             &bt BT_CLR                        &to 0   &trans  &trans  &trans  &kp COMMA  &kp PERIOD                  &none            &none            &none            &none            &trans
             >;
 
             label = "symnum";
