@@ -406,12 +406,12 @@
 
         WindowsWindowManagement {
             bindings = <
-&trans  &trans                    &trans                     &trans                    &trans                                                                                  &trans                 &trans  &trans  &trans  &trans
-&trans  &trans                    &trans                     &trans                    &trans                  &trans                                                  &trans  &trans                 &trans  &trans  &trans  &trans
-&trans  &trans                    &trans                     &trans                    &trans                  &trans                                                  &trans  &windowskeyshortcut L  &trans  &trans  &trans  &trans
-&trans  &windowskeyshortcut LEFT  &windowskeyshortcut RIGHT  &windowskeyshortcut DOWN  &windowskeyshortcut UP  &trans                                                  &trans  &trans                 &trans  &trans  &trans  &trans
-&trans  &trans                    &trans                     &trans                    &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &trans  &trans  &trans
-&trans  &trans                    &trans                     &trans                    &trans                          &trans  &trans  &trans  &trans  &trans  &trans          &trans                 &trans  &trans  &trans  &trans
+&trans  &trans                    &trans                     &trans                    &trans                                                                                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                    &trans                     &trans                    &trans                  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                    &trans                     &trans                    &trans                  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &windowskeyshortcut LEFT  &windowskeyshortcut RIGHT  &windowskeyshortcut DOWN  &windowskeyshortcut UP  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                    &trans                     &trans                    &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                    &trans                     &trans                    &trans                          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
