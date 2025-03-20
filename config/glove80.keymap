@@ -265,19 +265,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        space_left {
-            bindings = <&kp SPACE>;
-            key-positions = <37 38>;
-        };
-
-        space_right {
-            bindings = <&kp SPACE>;
-            key-positions = <41 42>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
