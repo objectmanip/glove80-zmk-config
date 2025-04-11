@@ -292,7 +292,7 @@
 &kp F1                    &kp F2         &kp F3           &kp F4                 &kp F5                                                                                                                                                                       &kp_tolayer 0 F6                 &kp F7                 &kp F8             &kp F9      &kp F10
 &kp ESCAPE                &kp N1         &kp N2           &kp N3                 &kp N4     &kp N5                                                                                                                                                    &kp N6  &kp N7                           &kp N8                 &kp N9             &kp N0      &unstuck_tap 0 F11
 &kp ESCAPE                &kp Q          &kp W            &kp F                  &kp P      &kp B                                                                                                                                                     &kp J   &kp L                            &kp U                  &kp Y              &kp MINUS   &symtap F12 ENTER
-&lt 0 TAB                 &kp A          &symtap LCTRL R  &layer_tap_custom 2 S  &kp T      &kp G                                                                                                                                                     &kp M   &symtap LS(LA(RIGHT_CONTROL)) N  &layer_tap_custom 2 E  &long_tap LCTRL I  &lt 10 O    &symtap LCTRL SQT
+&lt 0 TAB                 &kp A          &symtap LCTRL R  &layer_tap_custom 2 S  &kp T      &kp G                                                                                                                                                     &kp M   &symtap LS(LA(RIGHT_CONTROL)) N  &layer_tap_custom 2 E  &long_tap LCTRL I  &lt 9 O     &symtap LCTRL SQT
 &symtap LEFT_SHIFT EQUAL  &kp Z          &kp X            &kp C                  &kp D      &kp V   &symtap LEFT_ALT ESC  &symtap LS(HOME) HOME    &kp LEFT_GUI                  &none                         &symtap LS(END) END  &symtap RALT ESC  &kp K   &kp H                            &kp COMMA              &kp PERIOD         &kp SLASH   &sym_caps 0 BACKSLASH
 &kp LA(LC(F13))           &supervoldown  &supervolup      &kp LEFT               &kp RIGHT          &lt 1 SPACE           &symtap LCTRL BACKSPACE  &mt LA(LS(RCTRL)) LG(LS(F1))  &symtap LS(LA(RCTRL)) ESCAPE  &symtap LCTRL DEL    &sk LEFT_SHIFT            &kp UP                           &kp DOWN               &kp C_PREVIOUS     &kp C_NEXT  &superplay
             >;
@@ -306,7 +306,7 @@
 &trans           &to_desktop      &bt_1              &bt_2            &to_phone        &to_ipad                                                                &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &out OUT_USB
 &kp ENTER        &kp SLASH        &kp ASTERISK       &kp AMPERSAND    &kp GRAVE        &kp PAGE_UP                                                             &kp PAGE_UP     &kp KP_N7        &kp KP_N8        &kp KP_N9        &kp KP_MINUS     &trans
 &kp INS          &kp HASH         &kp LS(NUMBER_4)   &kp RA(N5)       &kp AT_SIGN      &kp EXCLAMATION                                                         &kp COLON       &kp KP_N4        &kp KP_N5        &kp KP_N6        &kp KP_NUMBER_0  &trans
-&kp PLUS         &kp PERCENT      &kp RA(SEMICOLON)  &kp TILDE        &kp CARET        &kp PAGE_DOWN    &trans  &trans  &trans  &to 9   &to 5      &to 3       &kp PAGE_DOWN   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH        &trans
+&kp PLUS         &kp PERCENT      &kp RA(SEMICOLON)  &kp TILDE        &kp CARET        &kp PAGE_DOWN    &trans  &trans  &trans  &to 0   &to 5      &to 3       &kp PAGE_DOWN   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH        &trans
 &bl BL_ON        &bl BL_OFF       &bl BL_CYCLE       &kp ENTER        &bt BT_CLR                        &to 0   &trans  &trans  &trans  &kp COMMA  &kp PERIOD                  &none            &none            &none            &none            &trans
             >;
 
@@ -401,18 +401,6 @@
             >;
         };
 
-        CAD {
-            label = "CAD";
-            bindings = <
-&kp F1           &kp F2                &kp F3             &kp F4                 &kp F5                                                                                                                                                                                                                    &kp F6           &kp F7           &kp F8           &kp F9           &kp F10
-&trans           &symtap F1 N1         &symtap F2 N2      &symtap F3 N3          &symtap F4 NUMBER_4           &symtap F5 N5                                                                                                                                                          &symtap F6 NUMBER_6  &symtap F7 N7    &symtap F8 N8    &symtap F9 N9    &symtap F10 N0   &unstuck_tap 0 F11
-&kp ESCAPE       &kp Q                 &kp W              &kp F                  &kp P                         &kp B                                                                                                                                                                  &kp PLUS             &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS        &symtap F12 ENTER
-&kp TAB          &long_tap LEFT_GUI A  &long_tap LCTRL R  &layer_tap_custom 2 S  &long_tap LS(LC(LEFT_ALT)) T  &kp G                                                                                                                                                                  &kp M                &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp SQT
-&kp LEFT_SHIFT   &kp Z                 &kp X              &kp C                  &kp D                         &kp V          &symtap LEFT_ALT ESCAPE  &symtap LS(HOME) HOME    &kp LEFT_GUI                  &none                         &symtap LS(END) END  &symtap RALT ESCAPE  &kp ASTERISK         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH        &sym_caps 0 BACKSLASH
-&kp LA(LC(F13))  &supervoldown         &supervolup        &kp LEFT               &kp RIGHT                                    &lt 4 SPACE              &symtap LCTRL BACKSPACE  &mt LA(LS(RCTRL)) LG(LS(F1))  &symtap LS(LA(RCTRL)) ESCAPE  &symtap LCTRL DEL    &sk PERIOD                                &kp UP           &kp DOWN         &kp C_PREVIOUS   &kp C_NEXT       &superplay
-            >;
-        };
-
         WindowsWindowManagement {
             bindings = <
 &trans  &trans                    &trans                     &trans                    &trans                                                                                  &trans  &trans  &trans  &trans  &trans
@@ -421,6 +409,30 @@
 &trans  &windowskeyshortcut LEFT  &windowskeyshortcut RIGHT  &windowskeyshortcut DOWN  &windowskeyshortcut UP  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                    &trans                     &trans                    &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                    &trans                     &trans                    &trans                          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        german_keyboard {
+            label = "de_colemak";
+            bindings = <
+&kp F1             &kp F2         &kp F3           &kp F4                 &kp F5                                                                                                                                                                       &kp_tolayer 0 F6                 &kp F7                 &kp F8             &kp F9      &kp F10
+&kp ESCAPE         &kp N1         &kp N2           &kp N3                 &kp N4     &kp N5                                                                                                                                                    &kp N6  &kp N7                           &kp N8                 &kp N9             &kp N0      &unstuck_tap 0 F11
+&kp ESCAPE         &kp Q          &kp W            &kp F                  &kp P      &kp B                                                                                                                                                     &kp J   &kp L                            &kp U                  &kp Z              &kp MINUS   &symtap F12 ENTER
+&lt 0 TAB          &kp A          &symtap LCTRL R  &layer_tap_custom 2 S  &kp T      &kp G                                                                                                                                                     &kp M   &symtap LS(LA(RIGHT_CONTROL)) N  &layer_tap_custom 2 E  &long_tap LCTRL I  &lt 9 O     &kp PIPE
+&kp RIGHT_BRACKET  &kp Y          &kp X            &kp C                  &kp D      &kp V   &symtap LEFT_ALT ESC  &symtap LS(HOME) HOME    &kp LEFT_GUI                  &none                         &symtap LS(END) END  &symtap RALT ESC  &kp K   &kp H                            &kp COMMA              &kp PERIOD         &kp SLASH   &sym_caps 0 BACKSLASH
+&kp LA(LC(F13))    &supervoldown  &supervolup      &kp LEFT               &kp RIGHT          &lt 1 SPACE           &symtap LCTRL BACKSPACE  &mt LA(LS(RCTRL)) LG(LS(F1))  &symtap LS(LA(RCTRL)) ESCAPE  &symtap LCTRL DEL    &mo 11                    &kp UP                           &kp DOWN               &kp C_PREVIOUS     &kp C_NEXT  &superplay
+            >;
+        };
+
+        german_shift {
+            label = "de_colemak_shift";
+            bindings = <
+&kp F1                 &kp F2         &kp F3       &kp F4      &kp F5                                                                                                                                                                                &kp_tolayer 0 F6  &kp F7         &kp F8            &kp F9              &kp F10
+&kp ESCAPE             &kp LS(N1)     &kp LS(N2)   &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                                                                                                                                                    &kp LS(N6)  &kp LS(N7)        &kp LS(N8)     &kp LS(N9)        &kp LS(N0)          &unstuck_tap 0 F11
+&kp ESCAPE             &kp LS(Q)      &kp LS(W)    &kp LS(F)   &kp LS(P)   &kp LS(B)                                                                                                                                                     &kp LS(J)   &kp LS(L)         &kp LS(U)      &kp LS(Z)         &kp LS(SLASH)       &symtap F12 ENTER
+&lt 0 TAB              &kp LS(A)      &kp LS(R)    &kp LS(S)   &kp LS(T)   &kp LS(G)                                                                                                                                                     &kp LS(M)   &kp LS(N)         &kp LS(E)      &kp LS(I)         &kp LS(O)           &kp LS(NUMBER_2)
+&kp RIGHT_PARENTHESIS  &kp LS(Y)      &kp LS(X)    &kp LS(C)   &kp LS(D)   &kp LS(V)   &symtap LEFT_ALT ESC  &symtap LS(HOME) HOME    &kp LEFT_GUI                  &none                         &symtap LS(END) END  &symtap RALT ESC  &kp LS(K)   &kp LS(H)         &kp LESS_THAN  &kp GREATER_THAN  &kp LS(UNDERSCORE)  &kp LS(NON_US_BACKSLASH)
+&kp LA(LC(F13))        &supervoldown  &supervolup  &kp LEFT    &kp RIGHT               &lt 1 SPACE           &symtap LCTRL BACKSPACE  &mt LA(LS(RCTRL)) LG(LS(F1))  &symtap LS(LA(RCTRL)) ESCAPE  &symtap LCTRL DEL    &mo 0                         &kp UP            &kp DOWN       &kp C_PREVIOUS    &kp C_NEXT          &superplay
             >;
         };
     };
