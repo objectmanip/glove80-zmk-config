@@ -419,7 +419,7 @@
 &kp ENTER        &kp SLASH        &kp ASTERISK      &kp AMPERSAND         &kp GRAVE        &kp PAGE_UP                                                             &kp PAGE_UP     &kp KP_N7        &kp KP_N8        &kp KP_N9        &kp KP_MINUS     &trans
 &kp INS          &kp HASH         &kp LS(NUMBER_4)  &kp LA(LS(NUMBER_2))  &kp AT_SIGN      &kp EXCLAMATION                                                         &kp COLON       &kp KP_N4        &kp KP_N5        &kp KP_N6        &kp KP_NUMBER_0  &trans
 &kp PLUS         &kp PERCENT      &kp RA(NUMBER_0)  &kp TILDE             &kp CARET        &kp PAGE_DOWN    &trans  &trans  &trans  &trans  &trans     &none       &kp PAGE_DOWN   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH        &trans
-&bl BL_ON        &bl BL_OFF       &bl BL_CYCLE      &kp ENTER             &bt BT_CLR                        &to 5   &trans  &trans  &trans  &kp COMMA  &kp PERIOD                  &none            &none            &none            &none            &trans
+&none            &none            &none              &kp ENTER        &bt BT_CLR                        &to 0   &trans  &trans  &trans  &kp COMMA  &kp PERIOD                  &none            &none            &none              &none            &trans
             >;
         };
 
@@ -482,4 +482,4 @@
             >;
         };
     };
-};
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
