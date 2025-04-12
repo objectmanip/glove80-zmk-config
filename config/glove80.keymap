@@ -333,7 +333,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        COLEMAKDH {
+        layer_COLEMAKDH {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
             // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
@@ -354,7 +354,7 @@
             label = "main";
         };
 
-        SYMBOLS-NUMPAD {
+        layer_SYMBOLS-NUMPAD {
             bindings = <
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                                                                          &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none
 &to_usb          &bt_0            &bt_1              &bt_2            &bt_3            &bt_4                                                                   &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &out OUT_USB
@@ -367,7 +367,7 @@
             label = "symnum";
         };
 
-        Brakets-Symbols {
+        layer_Brakets-Symbols {
             bindings = <
 &trans    &trans     &trans  &trans     &trans                                                                                                &trans                 &trans         &trans             &trans                &trans
 &trans    &trans     &trans  &trans     &trans                &trans                                                           &trans         &trans                 &trans         &trans             &trans                &trans
@@ -380,7 +380,7 @@
             label = "brakets";
         };
 
-        One-Handed1 {
+        layer_OneHanded1 {
             bindings = <
 &trans          &trans  &trans  &trans  &trans                                                                                        &kp_tolayer 0 F6  &trans     &trans   &trans     &trans
 &trans          &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                                        &kp N6  &kp N7            &kp N8     &kp N9   &kp N0     &kp F11
@@ -393,7 +393,7 @@
             label = "games";
         };
 
-        One-Handed2 {
+        layer_OneHanded2 {
             bindings = <
 &none       &none           &none       &none      &none                                                                                       &kp_tolayer 0 F6  &none  &none  &none  &none
 &trans      &kp N0          &kp N9      &kp N8     &kp N7  &kp N6                                                                       &none  &none             &none  &none  &none  &none
@@ -406,7 +406,7 @@
             label = "mirror-right";
         };
 
-        COLEMAK-APPLE {
+        layer_COLEMAKAPPLE {
             bindings = <
 &kp F1                &kp F2                    &kp F3             &kp F4                 &kp F5                                                                                                                                                                                                     &kp_tolayer 0 F6                 &kp F7                 &kp F8             &kp F9                    &kp F10
 &trans                &kp N1                    &kp N2             &kp N3                 &kp N4                           &kp N5                                                                                                                                                            &kp N6  &kp N7                           &kp N8                 &kp N0             &kp N0                    &unstuck_tap 0 F11
@@ -419,7 +419,7 @@
             label = "apple";
         };
 
-        SYMBOLS-NUMPAD-APPLE {
+        layer_SYMBOLSNUMPADAPPLE {
             label = "symnum-apple";
             bindings = <
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF   &rgb_ug RGB_HUD       &rgb_ug RGB_HUI                                                                                          &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none
@@ -431,7 +431,7 @@
             >;
         };
 
-        Brakets-Symbols-apple {
+        layer_BraketsSymbolsApple {
             label = "brakets-apple";
             bindings = <
 &trans    &trans           &trans  &trans     &trans                                                                                                &trans                 &trans           &trans             &trans                &trans
@@ -443,7 +443,7 @@
             >;
         };
 
-        Capital-Umlauts-Apple {
+        layer_CapitalUmlautsApple {
             label = "capital-umplauts-apple";
             bindings = <
 &trans    &trans               &trans  &trans     &trans                                                                                                &trans                 &trans               &trans             &trans                &trans
@@ -455,7 +455,7 @@
             >;
         };
 
-        WindowsWindowManagement {
+        layer_WindowsWindowManagement {
             bindings = <
 &trans  &trans                    &trans                     &trans                    &trans                                                                                  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                    &trans                     &trans                    &trans                  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
@@ -466,7 +466,7 @@
             >;
         };
 
-        german_keyboard {
+        layer_GermanKeyboard {
             label = "de_colemak";
             bindings = <
 &kp F1             &kp F2         &kp F3           &kp F4                 &kp F5                                                                                                                                                                       &kp_tolayer 0 F6                 &kp F7                 &kp F8             &kp F9      &kp F10
@@ -478,7 +478,7 @@
             >;
         };
 
-        german_shift {
+        layer_GermanShift {
             label = "de_colemak_shift";
             bindings = <
 &kp F1                 &kp F2         &kp F3       &kp F4      &kp F5                                                                                                                                                                                &kp_tolayer 0 F6  &kp F7         &kp F8            &kp F9              &kp F10
