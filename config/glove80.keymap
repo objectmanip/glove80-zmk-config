@@ -62,18 +62,18 @@
 / {
     underglow-layer {
         compatible  = "zmk,underglow-layer";
-
-        lower {
-            bindings = <
-                ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
-                PURPLE   PINK   PINK   PINK   PINK   PINK                                            ______   GOLD ORANGE ORANGE ORANGE    RED
-                PURPLE ______ ______ ORANGE ______ ______                                            ______ YELLOW YELLOW YELLOW ORANGE ______
-                PURPLE ______ ORANGE    RED ORANGE ______                                            ______ YELLOW YELLOW YELLOW ORANGE ______
-                  BLUE ______    RED    RED    RED ______ ______ ______ ______  ______ ______ ______ ______ YELLOW YELLOW YELLOW    RED   BLUE
-                ______ ______ ORANGE ORANGE ORANGE        ______  GREEN ______  ______ ______ ______        YELLOW YELLOW YELLOW    RED ______
-                >;
-            layer-id = <LAYER_Lower>;
-        };
+        //
+        // lower {
+        //     bindings = <
+        //         ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
+        //         PURPLE   PINK   PINK   PINK   PINK   PINK                                            ______   GOLD ORANGE ORANGE ORANGE    RED
+        //         PURPLE ______ ______ ORANGE ______ ______                                            ______ YELLOW YELLOW YELLOW ORANGE ______
+        //         PURPLE ______ ORANGE    RED ORANGE ______                                            ______ YELLOW YELLOW YELLOW ORANGE ______
+        //           BLUE ______    RED    RED    RED ______ ______ ______ ______  ______ ______ ______ ______ YELLOW YELLOW YELLOW    RED   BLUE
+        //         ______ ______ ORANGE ORANGE ORANGE        ______  GREEN ______  ______ ______ ______        YELLOW YELLOW YELLOW    RED ______
+        //         >;
+        //     layer-id = <LAYER_Lower>;
+        // };
 
         // rgb_ColemakDHWin {
         //     bindings = <
