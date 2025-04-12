@@ -70,7 +70,7 @@
                 ______   BLUE   BLUE   BLUE PURPLE YELLOW YELLOW YELLOW ______  ______ YELLOW YELLOW YELLOW 0x55ff55 0x55ff55 0x55ff55 0x55ff55 ______
                 ______   BLUE   BLUE   BLUE PURPLE        ______ ______   PINK    PINK ______ ______        ______ ______ ______ ______    RED
                 >;
-            layer-id = <LAYER_Cursor>;
+            layer-id = 0;
         };
 
     };
