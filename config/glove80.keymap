@@ -13,15 +13,6 @@
 
 // layers
 
-#define DEFAULT 0
-#define LOWER 1
-#define MAGIC 2
-
-&sk {
-    release-after-ms = <800>;
-    quick-release;
-};
-
 #define LAYER_ColemakDHWin 0
 #define LAYER_NumSymWin 1
 #define LAYER_BracketsWin 2
