@@ -231,32 +231,11 @@
             label = "APPLE_S";
         };
 
-        to_ipad: to_ipad {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 4 &to 5>;
-            label = "TO_IPAD";
-        };
-
-        to_desktop: to_desktop {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 0 &to 0>;
-            label = "TO_DESKTOP";
-        };
-
         to_usb: to_usb {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&out OUT_USB &to 0>;
             label = "TO_USB";
-        };
-
-        to_phone: to_phone {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 3 &to 5>;
-            label = "TO_PHONE";
         };
 
         windowskeyshortcut: windowskeyshortcut {
@@ -303,7 +282,7 @@
         SYMBOLS-NUMPAD {
             bindings = <
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                                                                          &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none
-&trans           &to_desktop      &bt_1              &bt_2            &to_phone        &to_ipad                                                                &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &out OUT_USB
+&to_usb          &bt_0            &bt_1              &bt_2            &bt_3            &bt_4                                                                   &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &out OUT_USB
 &kp ENTER        &kp SLASH        &kp ASTERISK       &kp AMPERSAND    &kp GRAVE        &kp PAGE_UP                                                             &kp PAGE_UP     &kp KP_N7        &kp KP_N8        &kp KP_N9        &kp KP_MINUS     &trans
 &kp INS          &kp HASH         &kp LS(NUMBER_4)   &kp RA(N5)       &kp AT_SIGN      &kp EXCLAMATION                                                         &kp COLON       &kp KP_N4        &kp KP_N5        &kp KP_N6        &kp KP_NUMBER_0  &trans
 &kp PLUS         &kp PERCENT      &kp RA(SEMICOLON)  &kp TILDE        &kp CARET        &kp PAGE_DOWN    &trans  &trans  &trans  &to 0   &to 5      &to 3       &kp PAGE_DOWN   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH        &trans
@@ -369,7 +348,7 @@
             label = "symnum-apple";
             bindings = <
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF   &rgb_ug RGB_HUD       &rgb_ug RGB_HUI                                                                                          &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none
-&trans           &to_desktop      &bt_1             &bt_2                 &to_phone        &to_ipad                                                                &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &out OUT_USB
+&to_usb          &bt_0            &bt_1             &bt_2                 &bt_3            &bt_4                                                                   &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &out OUT_USB
 &kp ENTER        &kp SLASH        &kp ASTERISK      &kp AMPERSAND         &kp GRAVE        &kp PAGE_UP                                                             &kp PAGE_UP     &kp KP_N7        &kp KP_N8        &kp KP_N9        &kp KP_MINUS     &trans
 &kp INS          &kp HASH         &kp LS(NUMBER_4)  &kp LA(LS(NUMBER_2))  &kp AT_SIGN      &kp EXCLAMATION                                                         &kp COLON       &kp KP_N4        &kp KP_N5        &kp KP_N6        &kp KP_NUMBER_0  &trans
 &kp PLUS         &kp PERCENT      &kp RA(NUMBER_0)  &kp TILDE             &kp CARET        &kp PAGE_DOWN    &trans  &trans  &trans  &trans  &trans     &none       &kp PAGE_DOWN   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH        &trans
