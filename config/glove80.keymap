@@ -23,6 +23,17 @@
     quick-release;
 };
 
+#define LAYER_COLEMAKDH 0
+#define LAYER_NUMSYMWIN 1
+#define LAYER_BRACKETSWIN 2
+#define LAYER_ONEHAND1 3
+#define LAYER_ONEHAND2 4
+#define LAYER_COLEMAKDHAPPLE 5
+#define LAYER_NUMSYMWIN 6
+#define LAYER_BACKETSAPPLE1 7
+#define LAYER_BACKETSAPPLE2 8
+#define LAYER_WINDOWMANAGE 9
+
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
 #define LAYER_Lower 0
@@ -59,20 +70,16 @@
 // ==== PER-KEY-RGB <section begins> ====
 #include <dt-bindings/zmk/rgb_colors.h>
 / {
-    COLEMAKDH {
-        compatible  = "zmk,underglow-layer";
-        cursor {
-            bindings = <
-                ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
-                ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
-                ______ ______ ORANGE ORANGE ______ YELLOW                                            YELLOW ______ ORANGE ORANGE ______ ______
-                ______ ______ ______ ______ ______ YELLOW                                            YELLOW 0x00ff00 0x00ff50 0x00ff50 0x00ff00 ______
-                ______   BLUE   BLUE   BLUE PURPLE YELLOW YELLOW YELLOW ______  ______ YELLOW YELLOW YELLOW 0x55ff55 0x55ff55 0x55ff55 0x55ff55 ______
-                ______   BLUE   BLUE   BLUE PURPLE        ______ ______   PINK    PINK ______ ______        ______ ______ ______ ______    RED
-                >;
-            layer-id = 0;
-        };
-
+     capslock {
+        bindings = <
+            ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
+            ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
+            ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
+            ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
+               RED ______ ______ ______ ______ ______ ______ ______ ______  ______ ______ ______ ______ ______ ______ ______ ______    RED
+            ______ ______ ______ ______ ______        ______ ______ ______  ______ ______ ______        ______ ______ ______ ______ ______
+            >;
+        layer-id = <LAYER_CapsLock>;
     };
   };
 // ====== END OF THE UNDERGLOW SECTION ======
