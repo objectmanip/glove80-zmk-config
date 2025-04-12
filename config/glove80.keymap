@@ -62,30 +62,30 @@
 / {
     underglow-layer {
         compatible  = "zmk,underglow-layer";
-        //
-        // lower {
-        //     bindings = <
-        //         ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
-        //         PURPLE   PINK   PINK   PINK   PINK   PINK                                            ______   GOLD ORANGE ORANGE ORANGE    RED
-        //         PURPLE ______ ______ ORANGE ______ ______                                            ______ YELLOW YELLOW YELLOW ORANGE ______
-        //         PURPLE ______ ORANGE    RED ORANGE ______                                            ______ YELLOW YELLOW YELLOW ORANGE ______
-        //           BLUE ______    RED    RED    RED ______ ______ ______ ______  ______ ______ ______ ______ YELLOW YELLOW YELLOW    RED   BLUE
-        //         ______ ______ ORANGE ORANGE ORANGE        ______  GREEN ______  ______ ______ ______        YELLOW YELLOW YELLOW    RED ______
-        //         >;
-        //     layer-id = <LAYER_Lower>;
-        // };
 
-        // rgb_ColemakDHWin {
-        //     bindings = <
-        //         ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
-        //         ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
-        //         ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
-        //         ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
-        //            RED ______ ______ ______ ______ ______ ______ ______ ______  ______ ______ ______ ______ ______ ______ ______ ______    RED
-        //         ______ ______ ______ ______ ______        ______ ______ ______  ______ ______ ______        ______ ______ ______ ______ ______
-        //         >;
-        //     layer-id = <LAYER_ColemakDHWin>;
-        // };
+        lower {
+            bindings = <
+                ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
+                PURPLE   PINK   PINK   PINK   PINK   PINK                                            ______   GOLD ORANGE ORANGE ORANGE    RED
+                PURPLE ______ ______ ORANGE ______ ______                                            ______ YELLOW YELLOW YELLOW ORANGE ______
+                PURPLE ______ ORANGE    RED ORANGE ______                                            ______ YELLOW YELLOW YELLOW ORANGE ______
+                  BLUE ______    RED    RED    RED ______ ______ ______ ______  ______ ______ ______ ______ YELLOW YELLOW YELLOW    RED   BLUE
+                ______ ______ ORANGE ORANGE ORANGE        ______  GREEN ______  ______ ______ ______        YELLOW YELLOW YELLOW    RED ______
+                >;
+            layer-id = <LAYER_Lower>;
+        };
+
+        rgb_ColemakDHWin {
+            bindings = <
+                ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
+                ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
+                ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
+                ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
+                   RED ______ ______ ______ ______ ______ ______ ______ ______  ______ ______ ______ ______ ______ ______ ______ ______    RED
+                ______ ______ ______ ______ ______        ______ ______ ______  ______ ______ ______        ______ ______ ______ ______ ______
+                >;
+            layer-id = <LAYER_ColemakDHWin>;
+        };
     };
 };
 // ====== END OF THE UNDERGLOW SECTION ======
@@ -346,7 +346,7 @@
             label = "main";
         };
 
-        layer_SYMBOLS-NUMPAD {
+        layer_SymNumWin {
             bindings = <
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                                                                          &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none
 &to_usb          &bt_0            &bt_1              &bt_2            &bt_3            &bt_4                                                                   &kp SCROLLLOCK  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &out OUT_USB
@@ -359,7 +359,7 @@
             label = "symnum";
         };
 
-        layer_Brakets-Symbols {
+        layer_BraketsWin {
             bindings = <
 &trans    &trans     &trans  &trans     &trans                                                                                                &trans                 &trans         &trans             &trans                &trans
 &trans    &trans     &trans  &trans     &trans                &trans                                                           &trans         &trans                 &trans         &trans             &trans                &trans
@@ -398,7 +398,7 @@
             label = "mirror-right";
         };
 
-        layer_COLEMAKAPPLE {
+        layer_ColemakDHMac {
             bindings = <
 &kp F1                &kp F2                    &kp F3             &kp F4                 &kp F5                                                                                                                                                                                                     &kp_tolayer 0 F6                 &kp F7                 &kp F8             &kp F9                    &kp F10
 &trans                &kp N1                    &kp N2             &kp N3                 &kp N4                           &kp N5                                                                                                                                                            &kp N6  &kp N7                           &kp N8                 &kp N0             &kp N0                    &unstuck_tap 0 F11
@@ -411,7 +411,7 @@
             label = "apple";
         };
 
-        layer_SYMBOLSNUMPADAPPLE {
+        layer_SymNumMac {
             label = "symnum-apple";
             bindings = <
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF   &rgb_ug RGB_HUD       &rgb_ug RGB_HUI                                                                                          &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none
@@ -423,7 +423,7 @@
             >;
         };
 
-        layer_BraketsSymbolsApple {
+        layer_Brakets1Mac {
             label = "brakets-apple";
             bindings = <
 &trans    &trans           &trans  &trans     &trans                                                                                                &trans                 &trans           &trans             &trans                &trans
@@ -435,7 +435,7 @@
             >;
         };
 
-        layer_CapitalUmlautsApple {
+        layer_Brakets2Mac {
             label = "capital-umplauts-apple";
             bindings = <
 &trans    &trans               &trans  &trans     &trans                                                                                                &trans                 &trans               &trans             &trans                &trans
@@ -447,7 +447,7 @@
             >;
         };
 
-        layer_WindowsWindowManagement {
+        layer_WindowManagementWin {
             bindings = <
 &trans  &trans                    &trans                     &trans                    &trans                                                                                  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                    &trans                     &trans                    &trans                  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
