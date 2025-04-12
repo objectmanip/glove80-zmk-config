@@ -22,16 +22,16 @@
     quick-release;
 };
 
-#define LAYER_COLEMAKDH 0
-#define LAYER_NUMSYMWIN 1
-#define LAYER_BRACKETSWIN 2
-#define LAYER_ONEHAND1 3
-#define LAYER_ONEHAND2 4
-#define LAYER_COLEMAKDHAPPLE 5
-#define LAYER_NUMSYMWIN 6
-#define LAYER_BACKETSAPPLE1 7
-#define LAYER_BACKETSAPPLE2 8
-#define LAYER_WINDOWMANAGE 9
+#define LAYER_ColemakDHWin 0
+#define LAYER_NumSymWin 1
+#define LAYER_BracketsWin 2
+#define LAYER_OneHand1 3
+#define LAYER_OneHand2 4
+#define LAYER_ColemakDHMac 5
+#define LAYER_NumSymMac 6
+#define LAYER_BracketsMac1 7
+#define LAYER_BrachetsMac2 8
+#define LAYER_WindowManagementWin 9
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -83,17 +83,17 @@
                 >;
             layer-id = <LAYER_Lower>;
         };
-    };
-    COLEMAKDH {
-        bindings = <
-            ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
-            ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
-            ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
-            ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
-               RED ______ ______ ______ ______ ______ ______ ______ ______  ______ ______ ______ ______ ______ ______ ______ ______    RED
-            ______ ______ ______ ______ ______        ______ ______ ______  ______ ______ ______        ______ ______ ______ ______ ______
-            >;
-        layer-id = <LAYER_COLEMAKDH>;
+        rgb_ColemakDHWin {
+            bindings = <
+                ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
+                ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
+                ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
+                ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
+                   RED ______ ______ ______ ______ ______ ______ ______ ______  ______ ______ ______ ______ ______ ______ ______ ______    RED
+                ______ ______ ______ ______ ______        ______ ______ ______  ______ ______ ______        ______ ______ ______ ______ ______
+                >;
+            layer-id = <LAYER_ColemakDHWin>;
+        };
     };
 };
 // ====== END OF THE UNDERGLOW SECTION ======
