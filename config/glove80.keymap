@@ -70,7 +70,7 @@
 // ==== PER-KEY-RGB <section begins> ====
 #include <dt-bindings/zmk/rgb_colors.h>
 / {
-     capslock {
+    COLEMAKDH {
         bindings = <
             ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
             ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
@@ -81,7 +81,7 @@
             >;
         layer-id = <LAYER_COLEMAKDH>;
     };
-  };
+};
 // ====== END OF THE UNDERGLOW SECTION ======
 / {
     behaviors {
